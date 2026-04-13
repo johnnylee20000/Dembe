@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+
+.chroma_tt_law/
+*.sqlite3
+
+/tmp/
+.DS_Store

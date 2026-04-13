@@ -3,3 +3,5 @@ openai
 sentence-transformers
 requests
 streamlit
+pypdf
+python-docx

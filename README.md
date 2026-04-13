@@ -42,7 +42,7 @@ Trinidad and Tobago legal AI assistant scaffold with RAG, vector search, agentic
 
 4. **Agentic tools**
    - Gazette web search: `web_search_gazette(...)`
-   - Document summarizer: `summarize_document(...)`
+   - Document summarizer: `summarize_document(...)` for `.txt`, `.md`, `.pdf`, and `.docx`
 
 5. **Validation ("Badal test")**
    - Script checks for key procedural concepts in answer:
@@ -109,6 +109,12 @@ python3 scripts/run_badal_test.py \
 ```bash
 streamlit run app_streamlit.py
 ```
+
+## Environment variables
+
+- `OPENAI_API_KEY`: required for OpenAI embeddings and full LLM synthesis.
+- Without this key, retrieval still works and the assistant returns a grounded
+  context-based fallback response with citations.
 
 ## Optional artifacts from prior work
 

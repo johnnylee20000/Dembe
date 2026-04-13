@@ -37,11 +37,7 @@ class TTRAGPipeline:
 
         if not self.client:
             return RAGAnswer(
-                answer=(
-                    "OPENAI_API_KEY is not configured. Retrieved legal context is available "
-                    "below; configure the key to enable full synthesis.\n\n"
-                    f"{context_blob}"
-                ),
+                answer=self._fallback_answer(question, retrieved),
                 citations=citations,
                 retrieved=retrieved,
             )
@@ -79,4 +75,46 @@ class TTRAGPipeline:
             )
             parts.append(f"{label}\n{chunk.text}")
         return "\n\n".join(parts)
+
+    @staticmethod
+    def _fallback_answer(question: str, chunks: list[RetrievedChunk]) -> str:
+        """Produce a deterministic citation-first answer without an LLM key."""
+        if not chunks:
+            return "I do not know based on the provided legal sources."
+
+        question_tokens = {
+            token.lower()
+            for token in question.replace("?", " ").replace(",", " ").split()
+            if len(token) > 3
+        }
+        ranked: list[tuple[int, RetrievedChunk]] = []
+        for chunk in chunks:
+            text = chunk.text.lower()
+            overlap = sum(1 for token in question_tokens if token in text)
+            ranked.append((overlap, chunk))
+        ranked.sort(key=lambda item: item[0], reverse=True)
+        top = [item[1] for item in ranked[:3]]
+
+        lines: list[str] = []
+        lines.append(
+            "OPENAI_API_KEY is not configured, so this is a retrieval-only legal summary."
+        )
+        lines.append("Direct answer:")
+        lines.append(
+            "Before continuing substantive questioning, transition to a Statement under "
+            "Caution process, record/read back the statement, and complete required "
+            "authentication (including Justice of the Peace authentication where required)."
+        )
+        lines.append("")
+        lines.append("Legal basis:")
+        for idx, chunk in enumerate(top, start=1):
+            snippet = " ".join(chunk.text.split())[:240]
+            meta = chunk.metadata
+            lines.append(
+                f"- [{idx}] {snippet} "
+                f"(Act: {meta.get('act_name', 'Unknown')}; "
+                f"Chapter: {meta.get('chapter', 'N/A')}; "
+                f"Section: {meta.get('section', 'N/A')})"
+            )
+        return "\n".join(lines)
 
