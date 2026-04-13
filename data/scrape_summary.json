@@ -1,0 +1,25 @@
+{
+  "generated_at_utc": "2026-04-13T20:41:47.773368+00:00",
+  "sources": {
+    "laws_portal": "https://laws.gov.tt",
+    "laws_ajax_index": "https://laws.gov.tt/ttdll-web/revision/Ajaxlist",
+    "mns_public_statement_pdf": "https://nationalsecurity.gov.tt/wp-content/uploads/2025/01/Updated-Public-Statements-2024.pdf",
+    "judges_rules_pdf": "https://www.ttlawcourts.org/attachments/article/11951/Judges%20Rules%201965.pdf",
+    "police_service_regulations_pdf": "https://www.ttlawcourts.org/attachments/article/1438/LN145_07.pdf",
+    "ttps_website": "https://www.ttps.gov.tt/"
+  },
+  "counts": {
+    "revised_laws_index_items": 533,
+    "laws_by_year_rows": 6026,
+    "legal_notice_rows": 13314,
+    "revision_category_rows": 3720,
+    "police_related_law_documents": 60,
+    "police_procedure_inventory_rows": 27,
+    "parsed_ttps_policy_items_from_mns_statement": 21
+  },
+  "notes": [
+    "The laws.gov.tt library explicitly labels itself as providing unofficial versions online.",
+    "Some TT police policy/procedure documents are listed publicly in FOIA statements but not directly downloadable.",
+    "SSL verification for www.ttlawcourts.org fails in this environment; those two downloads use verify=False."
+  ]
+}
