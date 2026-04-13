@@ -1,0 +1,3200 @@
+[
+  {
+    "law_id": 490,
+    "description": "Absconding Debtors",
+    "chapter_number": "8:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=490"
+  },
+  {
+    "law_id": 474,
+    "description": "Accessories and Abettors",
+    "chapter_number": "10:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=474"
+  },
+  {
+    "law_id": 960,
+    "description": "Accreditation Council of Trinidad and Tobago",
+    "chapter_number": "39:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=960"
+  },
+  {
+    "law_id": 486,
+    "description": "Administration of Estates",
+    "chapter_number": "9:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=486"
+  },
+  {
+    "law_id": 416,
+    "description": "Administration of Justice (Deoxyribonucleic Acid)",
+    "chapter_number": "5:34",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=416"
+  },
+  {
+    "law_id": 822,
+    "description": "Adoption of Children",
+    "chapter_number": "46:03 (The 1946 Act has been repealed and replaced by Act 67 of 2000 - see alert)",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=822"
+  },
+  {
+    "law_id": 938,
+    "description": "Advertisements Regulation",
+    "chapter_number": "35:53",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=938"
+  },
+  {
+    "law_id": 816,
+    "description": "Age of Majority",
+    "chapter_number": "46:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=816"
+  },
+  {
+    "law_id": 688,
+    "description": "Agricultural Contracts",
+    "chapter_number": "63:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=688"
+  },
+  {
+    "law_id": 612,
+    "description": "Agricultural Development Bank",
+    "chapter_number": "79:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=612"
+  },
+  {
+    "law_id": 680,
+    "description": "Agricultural Fires",
+    "chapter_number": "63:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=680"
+  },
+  {
+    "law_id": 908,
+    "description": "Agricultural Small Holdings Tenure",
+    "chapter_number": "59:53",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=908"
+  },
+  {
+    "law_id": 682,
+    "description": "Agricultural Society",
+    "chapter_number": "63:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=682"
+  },
+  {
+    "law_id": 854,
+    "description": "Airports Authority of Trinidad and Tobago",
+    "chapter_number": "49:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=854"
+  },
+  {
+    "law_id": 210,
+    "description": "Anatomy",
+    "chapter_number": "28:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=210"
+  },
+  {
+    "law_id": 726,
+    "description": "Animals (Diseases and Importation)",
+    "chapter_number": "67:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=726"
+  },
+  {
+    "law_id": 184,
+    "description": "Antibiotics",
+    "chapter_number": "30:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=184"
+  },
+  {
+    "law_id": 91383,
+    "description": "Anti-Doping in Sport",
+    "chapter_number": "40:56",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=91383"
+  },
+  {
+    "law_id": 596,
+    "description": "Anti-Dumping and Countervailing Duties",
+    "chapter_number": "78:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=596"
+  },
+  {
+    "law_id": 358,
+    "description": "Anti-Personnel Mines",
+    "chapter_number": "16:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=358"
+  },
+  {
+    "law_id": 302,
+    "description": "Anti-Terrorism",
+    "chapter_number": "12:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=302"
+  },
+  {
+    "law_id": 494,
+    "description": "Apportionment",
+    "chapter_number": "8:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=494"
+  },
+  {
+    "law_id": 418,
+    "description": "Arbitration",
+    "chapter_number": "5:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=418"
+  },
+  {
+    "law_id": 424,
+    "description": "Arbitration (Foreign Arbitral Awards)",
+    "chapter_number": "5:30",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=424"
+  },
+  {
+    "law_id": 890,
+    "description": "Archipelagic Waters and Exclusive Economic Zone",
+    "chapter_number": "51:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=890"
+  },
+  {
+    "law_id": 1056,
+    "description": "Architecture Profession",
+    "chapter_number": "90:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1056"
+  },
+  {
+    "law_id": 1096,
+    "description": "Asphalt Industry Regulation",
+    "chapter_number": "87:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1096"
+  },
+  {
+    "law_id": 982,
+    "description": "Assisted Secondary School Teachers' Pensions",
+    "chapter_number": "39:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=982"
+  },
+  {
+    "law_id": 624,
+    "description": "Association of Caribbean States (Headquarters)",
+    "chapter_number": "81:09",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=624"
+  },
+  {
+    "law_id": 1024,
+    "description": "Attachment of Earnings (Maintenance)",
+    "chapter_number": "45:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1024"
+  },
+  {
+    "law_id": 1128,
+    "description": "Auctioneers",
+    "chapter_number": "84:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1128"
+  },
+  {
+    "law_id": 932,
+    "description": "Auxiliary Fire Service",
+    "chapter_number": "35:54",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=932"
+  },
+  {
+    "law_id": 430,
+    "description": "Bail",
+    "chapter_number": "4:60",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=430"
+  },
+  {
+    "law_id": 432,
+    "description": "Bailiffs",
+    "chapter_number": "4:61",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=432"
+  },
+  {
+    "law_id": 484,
+    "description": "Bankruptcy and Insolvency",
+    "chapter_number": "9:70",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=484"
+  },
+  {
+    "law_id": 924,
+    "description": "Basel Convention (Regional Centre for Training and Technology Transfer)",
+    "chapter_number": "35:49",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=924"
+  },
+  {
+    "law_id": 740,
+    "description": "Beekeeping and Bee Products",
+    "chapter_number": "67:53",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=740"
+  },
+  {
+    "law_id": 170,
+    "description": "Betting Levy Board",
+    "chapter_number": "21:53",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=170"
+  },
+  {
+    "law_id": 662,
+    "description": "Bills of Exchange",
+    "chapter_number": "82:31",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=662"
+  },
+  {
+    "law_id": 846,
+    "description": "Bills of Lading",
+    "chapter_number": "50:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=846"
+  },
+  {
+    "law_id": 664,
+    "description": "Bills of Sale",
+    "chapter_number": "82:32",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=664"
+  },
+  {
+    "law_id": 1042,
+    "description": "Births and Deaths Registration",
+    "chapter_number": "44:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1042"
+  },
+  {
+    "law_id": 1002,
+    "description": "Botanic Gardens",
+    "chapter_number": "41:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1002"
+  },
+  {
+    "law_id": 172,
+    "description": "Boxing Control",
+    "chapter_number": "21:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=172"
+  },
+  {
+    "law_id": 994,
+    "description": "Boy Scouts Association",
+    "chapter_number": "40:70",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=994"
+  },
+  {
+    "law_id": 1094,
+    "description": "Brewery",
+    "chapter_number": "87:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1094"
+  },
+  {
+    "law_id": 482,
+    "description": "Bruce Stephens Trust",
+    "chapter_number": "9:32",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=482"
+  },
+  {
+    "law_id": 940,
+    "description": "Building Societies",
+    "chapter_number": "33:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=940"
+  },
+  {
+    "law_id": 206,
+    "description": "Burial Grounds",
+    "chapter_number": "30:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=206"
+  },
+  {
+    "law_id": 850,
+    "description": "BWIA International Airways Limited (Vesting)",
+    "chapter_number": "49:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=850"
+  },
+  {
+    "law_id": 1006,
+    "description": "CAB International (Regional Centre)",
+    "chapter_number": "39:55",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1006"
+  },
+  {
+    "law_id": 264,
+    "description": "Cadet Force",
+    "chapter_number": "14:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=264"
+  },
+  {
+    "law_id": 712,
+    "description": "Cane-Farmers Rehabilitation Board",
+    "chapter_number": "64:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=712"
+  },
+  {
+    "law_id": 884,
+    "description": "Carenage Pier",
+    "chapter_number": "51:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=884"
+  },
+  {
+    "law_id": 676,
+    "description": "Caribbean Agricultural Research and Development Institute",
+    "chapter_number": "63:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=676"
+  },
+  {
+    "law_id": 966,
+    "description": "Caribbean Aviation Training Institute",
+    "chapter_number": "39:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=966"
+  },
+  {
+    "law_id": 646,
+    "description": "Caribbean Community",
+    "chapter_number": "81:11",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=646"
+  },
+  {
+    "law_id": 644,
+    "description": "Caribbean Community (Caricom) Costa Rica Free Trade",
+    "chapter_number": "81:10",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=644"
+  },
+  {
+    "law_id": 648,
+    "description": "Caribbean Community (Caricom) Cuba Trade and Economic Co-operation",
+    "chapter_number": "81:12",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=648"
+  },
+  {
+    "law_id": 622,
+    "description": "Caribbean Community (Caricom) Dominican Republic Free Trade",
+    "chapter_number": "81:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=622"
+  },
+  {
+    "law_id": 642,
+    "description": "Caribbean Community (Caricom) Regional Organisation for Standards and Quality",
+    "chapter_number": "82:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=642"
+  },
+  {
+    "law_id": 760,
+    "description": "Caribbean Community Development Loans and Guarantee",
+    "chapter_number": "70:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=760"
+  },
+  {
+    "law_id": 498,
+    "description": "Caribbean Court of Justice",
+    "chapter_number": "4:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=498"
+  },
+  {
+    "law_id": 396,
+    "description": "Caribbean Court of Justice (Headquarters)",
+    "chapter_number": "6:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=396"
+  },
+  {
+    "law_id": 770,
+    "description": "Caribbean Court of Justice Trust Fund",
+    "chapter_number": "70:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=770"
+  },
+  {
+    "law_id": 590,
+    "description": "Caribbean Development Bank",
+    "chapter_number": "79:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=590"
+  },
+  {
+    "law_id": 958,
+    "description": "Caribbean Examinations Council",
+    "chapter_number": "39:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=958"
+  },
+  {
+    "law_id": 312,
+    "description": "Caribbean Examinations Council (Privileges and Immunities)",
+    "chapter_number": "17:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=312"
+  },
+  {
+    "law_id": 964,
+    "description": "Caribbean Fisheries Training and Development Institute",
+    "chapter_number": "39:53",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=964"
+  },
+  {
+    "law_id": 678,
+    "description": "Caribbean Food Corporation",
+    "chapter_number": "63:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=678"
+  },
+  {
+    "law_id": 1102,
+    "description": "Caribbean Industrial Research Institute",
+    "chapter_number": "85:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1102"
+  },
+  {
+    "law_id": 762,
+    "description": "Caribbean Investment Corporation",
+    "chapter_number": "70:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=762"
+  },
+  {
+    "law_id": 764,
+    "description": "Caribbean Investment Fund",
+    "chapter_number": "70:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=764"
+  },
+  {
+    "law_id": 872,
+    "description": "Caribbean Meteorological Organisation",
+    "chapter_number": "55:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=872"
+  },
+  {
+    "law_id": 634,
+    "description": "Caricom Enterprises",
+    "chapter_number": "81:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=634"
+  },
+  {
+    "law_id": 708,
+    "description": "Caroni (1975) Limited and Orange Grove National Company (Divestment)",
+    "chapter_number": "64:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=708"
+  },
+  {
+    "law_id": 714,
+    "description": "Caroni (1975) Limited Vesting",
+    "chapter_number": "64:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=714"
+  },
+  {
+    "law_id": 848,
+    "description": "Carriage of Goods by Sea",
+    "chapter_number": "50:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=848"
+  },
+  {
+    "law_id": 564,
+    "description": "Casual Revenue",
+    "chapter_number": "74:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=564"
+  },
+  {
+    "law_id": 592,
+    "description": "Central Bank",
+    "chapter_number": "79:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=592"
+  },
+  {
+    "law_id": 542,
+    "description": "Central Tenders Board",
+    "chapter_number": "71:91",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=542"
+  },
+  {
+    "law_id": 950,
+    "description": "Chaguaramas Agreement Special Fund",
+    "chapter_number": "35:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=950"
+  },
+  {
+    "law_id": 948,
+    "description": "Chaguaramas Development Authority",
+    "chapter_number": "35:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=948"
+  },
+  {
+    "law_id": 826,
+    "description": "Children",
+    "chapter_number": "46:01 (The 1925 Ordinance has been repealed and replaced by Act No 12 of 2012)",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=826"
+  },
+  {
+    "law_id": 436,
+    "description": "Children and Young Persons (Harmful Publications)",
+    "chapter_number": "11:18",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=436"
+  },
+  {
+    "law_id": 808,
+    "description": "Children's Authority",
+    "chapter_number": "46:10",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=808"
+  },
+  {
+    "law_id": 90718,
+    "description": "Children\u2019s Community Residences, Foster Care and Nurseries",
+    "chapter_number": "46:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=90718"
+  },
+  {
+    "law_id": 232,
+    "description": "Children's Life Fund",
+    "chapter_number": "29:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=232"
+  },
+  {
+    "law_id": 156,
+    "description": "Cinematograph",
+    "chapter_number": "20:10",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=156"
+  },
+  {
+    "law_id": 968,
+    "description": "Cipriani College of Labour and Co-operative Studies",
+    "chapter_number": "39:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=968"
+  },
+  {
+    "law_id": 538,
+    "description": "Citizenship of the Republic of Trinidad and Tobago",
+    "chapter_number": "1:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=538"
+  },
+  {
+    "law_id": 134,
+    "description": "City of San Fernando",
+    "chapter_number": "25:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=134"
+  },
+  {
+    "law_id": 852,
+    "description": "Civil Aviation",
+    "chapter_number": "49:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=852"
+  },
+  {
+    "law_id": 274,
+    "description": "Civil Aviation (Tokyo Convention)",
+    "chapter_number": "11:21",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=274"
+  },
+  {
+    "law_id": 168,
+    "description": "Civil Service",
+    "chapter_number": "23:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=168"
+  },
+  {
+    "law_id": 722,
+    "description": "Claying of Cocoa",
+    "chapter_number": "64:22",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=722"
+  },
+  {
+    "law_id": 720,
+    "description": "Cocoa (Import and Export)",
+    "chapter_number": "64:21",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=720"
+  },
+  {
+    "law_id": 1034,
+    "description": "Cohabitational Relationships",
+    "chapter_number": "45:55",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1034"
+  },
+  {
+    "law_id": 442,
+    "description": "Coinage Offences",
+    "chapter_number": "11:15",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=442"
+  },
+  {
+    "law_id": 1008,
+    "description": "College of Science, Technology and Applied Arts of Trinidad and Tobago",
+    "chapter_number": "39:56",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1008"
+  },
+  {
+    "law_id": 400,
+    "description": "Commissioners of Affidavits",
+    "chapter_number": "6:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=400"
+  },
+  {
+    "law_id": 314,
+    "description": "Commissions of Enquiry",
+    "chapter_number": "19:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=314"
+  },
+  {
+    "law_id": 362,
+    "description": "Commonwealth Development Corporation (Privileges and Immunities)",
+    "chapter_number": "17:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=362"
+  },
+  {
+    "law_id": 368,
+    "description": "Commonwealth Secretariat (Privileges and Immunities)",
+    "chapter_number": "17:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=368"
+  },
+  {
+    "law_id": 254,
+    "description": "Community Service Orders",
+    "chapter_number": "13:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=254"
+  },
+  {
+    "law_id": 608,
+    "description": "Companies",
+    "chapter_number": "81:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=608"
+  },
+  {
+    "law_id": 374,
+    "description": "Compensation for Injuries",
+    "chapter_number": "8:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=374"
+  },
+  {
+    "law_id": 438,
+    "description": "Computer Misuse",
+    "chapter_number": "11:17",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=438"
+  },
+  {
+    "law_id": 724,
+    "description": "Conservation of Wild Life",
+    "chapter_number": "67:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=724"
+  },
+  {
+    "law_id": 530,
+    "description": "Constitution of the Republic of Trinidad and Tobago",
+    "chapter_number": "1:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=530"
+  },
+  {
+    "law_id": 536,
+    "description": "Constitution (Prescribed Matters)",
+    "chapter_number": "1:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=536"
+  },
+  {
+    "law_id": 652,
+    "description": "Consumer Protection and Safety",
+    "chapter_number": "82:34",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=652"
+  },
+  {
+    "law_id": 534,
+    "description": "Continental Shelf",
+    "chapter_number": "1:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=534"
+  },
+  {
+    "law_id": 742,
+    "description": "Control of Importation of Live Fish",
+    "chapter_number": "67:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=742"
+  },
+  {
+    "law_id": 874,
+    "description": "Conveyancing and Law of Property",
+    "chapter_number": "56:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=874"
+  },
+  {
+    "law_id": 628,
+    "description": "Co-operative Societies",
+    "chapter_number": "81:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=628"
+  },
+  {
+    "law_id": 716,
+    "description": "Copra Products Control",
+    "chapter_number": "64:30",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=716"
+  },
+  {
+    "law_id": 1142,
+    "description": "Copyright",
+    "chapter_number": "82:80",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1142"
+  },
+  {
+    "law_id": 408,
+    "description": "Coroners",
+    "chapter_number": "6:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=408"
+  },
+  {
+    "law_id": 250,
+    "description": "Corporal Punishment (Offenders Over Eighteen)",
+    "chapter_number": "13:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=250"
+  },
+  {
+    "law_id": 560,
+    "description": "Corporation Tax",
+    "chapter_number": "75:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=560"
+  },
+  {
+    "law_id": 970,
+    "description": "Council of Legal Education",
+    "chapter_number": "39:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=970"
+  },
+  {
+    "law_id": 330,
+    "description": "Counting Unremunerated Work",
+    "chapter_number": "19:09",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=330"
+  },
+  {
+    "law_id": 750,
+    "description": "Country Markets",
+    "chapter_number": "68:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=750"
+  },
+  {
+    "law_id": 378,
+    "description": "Court Deposits",
+    "chapter_number": "7:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=378"
+  },
+  {
+    "law_id": 208,
+    "description": "Cremation",
+    "chapter_number": "30:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=208"
+  },
+  {
+    "law_id": 410,
+    "description": "Criminal Injuries Compensation",
+    "chapter_number": "5:31",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=410"
+  },
+  {
+    "law_id": 470,
+    "description": "Criminal Law",
+    "chapter_number": "10:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=470"
+  },
+  {
+    "law_id": 472,
+    "description": "Criminal Offences",
+    "chapter_number": "11:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=472"
+  },
+  {
+    "law_id": 296,
+    "description": "Criminal Procedure",
+    "chapter_number": "12:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=296"
+  },
+  {
+    "law_id": 294,
+    "description": "Criminal Procedure (Corporations)",
+    "chapter_number": "12:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=294"
+  },
+  {
+    "law_id": 256,
+    "description": "Criminal Procedure (Plea Discussion and Plea Agreement)",
+    "chapter_number": "13:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=256"
+  },
+  {
+    "law_id": 600,
+    "description": "Customs",
+    "chapter_number": "78:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=600"
+  },
+  {
+    "law_id": 602,
+    "description": "Customs Brokers and Customs Clerks",
+    "chapter_number": "78:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=602"
+  },
+  {
+    "law_id": 282,
+    "description": "Dangerous Drugs",
+    "chapter_number": "11:25",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=282"
+  },
+  {
+    "law_id": 80855,
+    "description": "Data Protection",
+    "chapter_number": "22:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=80855"
+  },
+  {
+    "law_id": 496,
+    "description": "Debtors",
+    "chapter_number": "8:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=496"
+  },
+  {
+    "law_id": 1028,
+    "description": "Deceased Wife's Sister's Marriage",
+    "chapter_number": "45:54",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1028"
+  },
+  {
+    "law_id": 478,
+    "description": "Deeds of Arrangement",
+    "chapter_number": "9:71",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=478"
+  },
+  {
+    "law_id": 262,
+    "description": "Defence",
+    "chapter_number": "14:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=262"
+  },
+  {
+    "law_id": 934,
+    "description": "Demolition of Unsafe Structures",
+    "chapter_number": "35:55",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=934"
+  },
+  {
+    "law_id": 188,
+    "description": "Dental Profession",
+    "chapter_number": "29:54",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=188"
+  },
+  {
+    "law_id": 780,
+    "description": "Development Loans",
+    "chapter_number": "71:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=780"
+  },
+  {
+    "law_id": 366,
+    "description": "Diplomatic Agents and Consular Officers (Oaths and Notarial Acts)",
+    "chapter_number": "17:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=366"
+  },
+  {
+    "law_id": 356,
+    "description": "Disasters Measures",
+    "chapter_number": "16:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=356"
+  },
+  {
+    "law_id": 888,
+    "description": "Disposal of Uncleared Goods",
+    "chapter_number": "51:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=888"
+  },
+  {
+    "law_id": 224,
+    "description": "Division of Trinidad",
+    "chapter_number": "26:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=224"
+  },
+  {
+    "law_id": 60311,
+    "description": "Dog Control",
+    "chapter_number": "67:56",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=60311"
+  },
+  {
+    "law_id": 746,
+    "description": "Dogs",
+    "chapter_number": "67:54",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=746"
+  },
+  {
+    "law_id": 1032,
+    "description": "Domestic Violence",
+    "chapter_number": "45:56",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1032"
+  },
+  {
+    "law_id": 838,
+    "description": "Droghers",
+    "chapter_number": "50:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=838"
+  },
+  {
+    "law_id": 220,
+    "description": "Dry River",
+    "chapter_number": "26:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=220"
+  },
+  {
+    "law_id": 632,
+    "description": "Economic Sanctions",
+    "chapter_number": "81:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=632"
+  },
+  {
+    "law_id": 986,
+    "description": "Education",
+    "chapter_number": "39:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=986"
+  },
+  {
+    "law_id": 136,
+    "description": "Elections and Boundaries Commission (Local Government and Tobago House of Assembly)",
+    "chapter_number": "25:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=136"
+  },
+  {
+    "law_id": 882,
+    "description": "Electric Installations (Buildings)",
+    "chapter_number": "54:71",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=882"
+  },
+  {
+    "law_id": 868,
+    "description": "Electricity (Inspection)",
+    "chapter_number": "54:72",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=868"
+  },
+  {
+    "law_id": 162,
+    "description": "Electronic Transactions",
+    "chapter_number": "22:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=162"
+  },
+  {
+    "law_id": 604,
+    "description": "Electronic Transfer of Funds Crime",
+    "chapter_number": "79:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=604"
+  },
+  {
+    "law_id": 80721,
+    "description": "Emergency Ambulance Services and Emergency Medical Personnel",
+    "chapter_number": "29:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=80721"
+  },
+  {
+    "law_id": 308,
+    "description": "Emigration (Children)",
+    "chapter_number": "18:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=308"
+  },
+  {
+    "law_id": 1068,
+    "description": "Employment Exchange",
+    "chapter_number": "88:09",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1068"
+  },
+  {
+    "law_id": 1060,
+    "description": "Engineering Profession",
+    "chapter_number": "90:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1060"
+  },
+  {
+    "law_id": 930,
+    "description": "Environmental Management",
+    "chapter_number": "35:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=930"
+  },
+  {
+    "law_id": 164,
+    "description": "Equal Opportunity",
+    "chapter_number": "22:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=164"
+  },
+  {
+    "law_id": 392,
+    "description": "Evidence",
+    "chapter_number": "7:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=392"
+  },
+  {
+    "law_id": 606,
+    "description": "Exchange Control",
+    "chapter_number": "79:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=606"
+  },
+  {
+    "law_id": 748,
+    "description": "Exchequer and Audit",
+    "chapter_number": "69:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=748"
+  },
+  {
+    "law_id": 598,
+    "description": "Excise (General Provisions)",
+    "chapter_number": "78:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=598"
+  },
+  {
+    "law_id": 754,
+    "description": "Expenditure in Advance of Appropriation",
+    "chapter_number": "69:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=754"
+  },
+  {
+    "law_id": 360,
+    "description": "Explosives",
+    "chapter_number": "16:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=360"
+  },
+  {
+    "law_id": 698,
+    "description": "Exportation of Fruit",
+    "chapter_number": "63:53",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=698"
+  },
+  {
+    "law_id": 782,
+    "description": "External Loans",
+    "chapter_number": "71:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=782"
+  },
+  {
+    "law_id": 300,
+    "description": "Extradition (Commonwealth and Foreign Territories)",
+    "chapter_number": "12:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=300"
+  },
+  {
+    "law_id": 650,
+    "description": "Fair Trading",
+    "chapter_number": "81:13",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=650"
+  },
+  {
+    "law_id": 812,
+    "description": "Family Law (Guardianship of Minors, Domicile and Maintenance)",
+    "chapter_number": "46:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=812"
+  },
+  {
+    "law_id": 814,
+    "description": "Family Proceedings",
+    "chapter_number": "46:09",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=814"
+  },
+  {
+    "law_id": 686,
+    "description": "Farmers Advances",
+    "chapter_number": "63:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=686"
+  },
+  {
+    "law_id": 694,
+    "description": "Fertilisers and Feeding Stuffs",
+    "chapter_number": "63:55",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=694"
+  },
+  {
+    "law_id": 616,
+    "description": "Financial Institutions",
+    "chapter_number": "79:09",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=616"
+  },
+  {
+    "law_id": 540,
+    "description": "Financial Intelligence Unit of Trinidad and Tobago",
+    "chapter_number": "72:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=540"
+  },
+  {
+    "law_id": 346,
+    "description": "Firearms",
+    "chapter_number": "16:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=346"
+  },
+  {
+    "law_id": 926,
+    "description": "Fire Service",
+    "chapter_number": "35:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=926"
+  },
+  {
+    "law_id": 1110,
+    "description": "Fiscal Incentives",
+    "chapter_number": "85:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1110"
+  },
+  {
+    "law_id": 736,
+    "description": "Fisheries",
+    "chapter_number": "67:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=736"
+  },
+  {
+    "law_id": 1100,
+    "description": "Fishing Industry (Assistance)",
+    "chapter_number": "85:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1100"
+  },
+  {
+    "law_id": 182,
+    "description": "Food and Drugs",
+    "chapter_number": "30:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=182"
+  },
+  {
+    "law_id": 768,
+    "description": "Foreign Investment",
+    "chapter_number": "70:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=768"
+  },
+  {
+    "law_id": 1064,
+    "description": "Foreign Labour Contracts",
+    "chapter_number": "88:11",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1064"
+  },
+  {
+    "law_id": 728,
+    "description": "Forests",
+    "chapter_number": "66:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=728"
+  },
+  {
+    "law_id": 446,
+    "description": "Forgery",
+    "chapter_number": "11:13",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=446"
+  },
+  {
+    "law_id": 174,
+    "description": "Freedom of Information",
+    "chapter_number": "22:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=174"
+  },
+  {
+    "law_id": 194,
+    "description": "Friendly Societies",
+    "chapter_number": "32:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=194"
+  },
+  {
+    "law_id": 942,
+    "description": "Friendly Societies Housing Corporation",
+    "chapter_number": "33:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=942"
+  },
+  {
+    "law_id": 434,
+    "description": "Gambling and Betting",
+    "chapter_number": "11:19",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=434"
+  },
+  {
+    "law_id": 774,
+    "description": "General Loan and Stock",
+    "chapter_number": "71:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=774"
+  },
+  {
+    "law_id": 776,
+    "description": "General Local Loan",
+    "chapter_number": "71:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=776"
+  },
+  {
+    "law_id": 552,
+    "description": "General Local Loan (Municipal Corporations)",
+    "chapter_number": "71:60",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=552"
+  },
+  {
+    "law_id": 244,
+    "description": "Geneva Conventions",
+    "chapter_number": "12:09",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=244"
+  },
+  {
+    "law_id": 276,
+    "description": "Genocide",
+    "chapter_number": "11:20",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=276"
+  },
+  {
+    "law_id": 1138,
+    "description": "Geographical Indications",
+    "chapter_number": "82:78",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1138"
+  },
+  {
+    "law_id": 900,
+    "description": "Geological Survey",
+    "chapter_number": "60:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=900"
+  },
+  {
+    "law_id": 996,
+    "description": "Girl Guides Association",
+    "chapter_number": "40:71",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=996"
+  },
+  {
+    "law_id": 792,
+    "description": "Government Savings Bonds",
+    "chapter_number": "71:41",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=792"
+  },
+  {
+    "law_id": 794,
+    "description": "Government Securities",
+    "chapter_number": "71:42",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=794"
+  },
+  {
+    "law_id": 546,
+    "description": "Guarantee of Loans (Companies)",
+    "chapter_number": "71:82",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=546"
+  },
+  {
+    "law_id": 548,
+    "description": "Guarantee of Loans (Statutory Authorities)",
+    "chapter_number": "71:81",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=548"
+  },
+  {
+    "law_id": 544,
+    "description": "Guarantee of Loans (University of the West Indies)",
+    "chapter_number": "71:83",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=544"
+  },
+  {
+    "law_id": 370,
+    "description": "Habeas Corpus",
+    "chapter_number": "8:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=370"
+  },
+  {
+    "law_id": 840,
+    "description": "Harbours",
+    "chapter_number": "50:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=840"
+  },
+  {
+    "law_id": 584,
+    "description": "Health Surcharge",
+    "chapter_number": "75:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=584"
+  },
+  {
+    "law_id": 772,
+    "description": "Heritage and Stabilisation Fund",
+    "chapter_number": "70:09",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=772"
+  },
+  {
+    "law_id": 800,
+    "description": "Highways",
+    "chapter_number": "48:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=800"
+  },
+  {
+    "law_id": 280,
+    "description": "Hijacking",
+    "chapter_number": "11:22",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=280"
+  },
+  {
+    "law_id": 1048,
+    "description": "Hindu Marriage",
+    "chapter_number": "45:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1048"
+  },
+  {
+    "law_id": 666,
+    "description": "Hire Purchase",
+    "chapter_number": "82:33",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=666"
+  },
+  {
+    "law_id": 618,
+    "description": "Home Mortgage Bank",
+    "chapter_number": "79:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=618"
+  },
+  {
+    "law_id": 1088,
+    "description": "Hotel Proprietors",
+    "chapter_number": "87:55",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1088"
+  },
+  {
+    "law_id": 518,
+    "description": "House of Representatives (Powers and Privileges)",
+    "chapter_number": "2:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=518"
+  },
+  {
+    "law_id": 196,
+    "description": "Housing",
+    "chapter_number": "33:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=196"
+  },
+  {
+    "law_id": 240,
+    "description": "Human Tissue Transplant",
+    "chapter_number": "28:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=240"
+  },
+  {
+    "law_id": 306,
+    "description": "Immigration",
+    "chapter_number": "18:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=306"
+  },
+  {
+    "law_id": 320,
+    "description": "Immigration (Advance Passenger Information)",
+    "chapter_number": "18:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=320"
+  },
+  {
+    "law_id": 318,
+    "description": "Immigration (Caribbean Community Skilled Nationals)",
+    "chapter_number": "18:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=318"
+  },
+  {
+    "law_id": 562,
+    "description": "Income Tax",
+    "chapter_number": "75:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=562"
+  },
+  {
+    "law_id": 1098,
+    "description": "Income Tax (In Aid of Industry)",
+    "chapter_number": "85:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1098"
+  },
+  {
+    "law_id": 778,
+    "description": "Independence Development Loans",
+    "chapter_number": "71:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=778"
+  },
+  {
+    "law_id": 290,
+    "description": "Indictable Offences (Preliminary Enquiry)",
+    "chapter_number": "12:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=290"
+  },
+  {
+    "law_id": 1152,
+    "description": "Industrial Designs",
+    "chapter_number": "82:77",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1152"
+  },
+  {
+    "law_id": 1084,
+    "description": "Industrial Relations",
+    "chapter_number": "88:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1084"
+  },
+  {
+    "law_id": 1004,
+    "description": "Industrial Training",
+    "chapter_number": "39:54",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1004"
+  },
+  {
+    "law_id": 820,
+    "description": "Infants",
+    "chapter_number": "46:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=820"
+  },
+  {
+    "law_id": 978,
+    "description": "Institute of Marine Affairs",
+    "chapter_number": "37:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=978"
+  },
+  {
+    "law_id": 1124,
+    "description": "Insurance",
+    "chapter_number": "84:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1124"
+  },
+  {
+    "law_id": 176,
+    "description": "Integrity in Public Life",
+    "chapter_number": "22:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=176"
+  },
+  {
+    "law_id": 348,
+    "description": "Interception of Communications",
+    "chapter_number": "15:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=348"
+  },
+  {
+    "law_id": 242,
+    "description": "International Child Abduction",
+    "chapter_number": "12:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=242"
+  },
+  {
+    "law_id": 508,
+    "description": "International Criminal Court",
+    "chapter_number": "4:26",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=508"
+  },
+  {
+    "law_id": 758,
+    "description": "International Financial Organisations",
+    "chapter_number": "70:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=758"
+  },
+  {
+    "law_id": 756,
+    "description": "International Financial Organisations (Inter-American Development Bank)",
+    "chapter_number": "70:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=756"
+  },
+  {
+    "law_id": 766,
+    "description": "International Financial Organisations (Inter-American Investment Corporation)",
+    "chapter_number": "70:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=766"
+  },
+  {
+    "law_id": 278,
+    "description": "International War Crimes Tribunals",
+    "chapter_number": "11:23",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=278"
+  },
+  {
+    "law_id": 524,
+    "description": "Interpretation",
+    "chapter_number": "3:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=524"
+  },
+  {
+    "law_id": 388,
+    "description": "Interpreters",
+    "chapter_number": "6:54",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=388"
+  },
+  {
+    "law_id": 422,
+    "description": "Investment Disputes Awards (Enforcement)",
+    "chapter_number": "5:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=422"
+  },
+  {
+    "law_id": 404,
+    "description": "Judges Salaries and Pensions",
+    "chapter_number": "6:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=404"
+  },
+  {
+    "law_id": 420,
+    "description": "Judgments Extension",
+    "chapter_number": "5:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=420"
+  },
+  {
+    "law_id": 402,
+    "description": "Judicial and Legal Service",
+    "chapter_number": "6:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=402"
+  },
+  {
+    "law_id": 382,
+    "description": "Judicial Review",
+    "chapter_number": "7:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=382"
+  },
+  {
+    "law_id": 398,
+    "description": "Jury",
+    "chapter_number": "6:53",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=398"
+  },
+  {
+    "law_id": 414,
+    "description": "Justice Protection",
+    "chapter_number": "5:33",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=414"
+  },
+  {
+    "law_id": 288,
+    "description": "Kidnapping",
+    "chapter_number": "11:26",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=288"
+  },
+  {
+    "law_id": 886,
+    "description": "La Brea Jetty and Tramway",
+    "chapter_number": "51:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=886"
+  },
+  {
+    "law_id": 918,
+    "description": "Land Acquisition",
+    "chapter_number": "58:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=918"
+  },
+  {
+    "law_id": 922,
+    "description": "Land Surveyors",
+    "chapter_number": "58:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=922"
+  },
+  {
+    "law_id": 914,
+    "description": "Land Tenants (Security of Tenure)",
+    "chapter_number": "59:54",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=914"
+  },
+  {
+    "law_id": 448,
+    "description": "Larceny",
+    "chapter_number": "11:12",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=448"
+  },
+  {
+    "law_id": 502,
+    "description": "Law Reform",
+    "chapter_number": "3:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=502"
+  },
+  {
+    "law_id": 138,
+    "description": "Law Reform (Pensions)",
+    "chapter_number": "23:59",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=138"
+  },
+  {
+    "law_id": 504,
+    "description": "Law Revision",
+    "chapter_number": "3:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=504"
+  },
+  {
+    "law_id": 1140,
+    "description": "Layout Designs (Topographies) of Integrated Circuits",
+    "chapter_number": "82:79",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1140"
+  },
+  {
+    "law_id": 384,
+    "description": "Legal Aid and Advice",
+    "chapter_number": "7:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=384"
+  },
+  {
+    "law_id": 1054,
+    "description": "Legal Profession",
+    "chapter_number": "90:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1054"
+  },
+  {
+    "law_id": 440,
+    "description": "Libel and Defamation",
+    "chapter_number": "11:16",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=440"
+  },
+  {
+    "law_id": 1120,
+    "description": "Licensing of Dealers (Precious Metals and Stones)",
+    "chapter_number": "84:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1120"
+  },
+  {
+    "law_id": 1082,
+    "description": "Limeoil (Control of Manufacture)",
+    "chapter_number": "87:56",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1082"
+  },
+  {
+    "law_id": 718,
+    "description": "Limes Export Levy",
+    "chapter_number": "64:40",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=718"
+  },
+  {
+    "law_id": 372,
+    "description": "Limitation of Certain Actions",
+    "chapter_number": "7:09",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=372"
+  },
+  {
+    "law_id": 1112,
+    "description": "Liquor Licences",
+    "chapter_number": "84:10",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1112"
+  },
+  {
+    "law_id": 202,
+    "description": "Litter",
+    "chapter_number": "30:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=202"
+  },
+  {
+    "law_id": 738,
+    "description": "Livestock and Livestock Products Board",
+    "chapter_number": "67:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=738"
+  },
+  {
+    "law_id": 550,
+    "description": "Local Authorities Grants and Loans",
+    "chapter_number": "71:80",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=550"
+  },
+  {
+    "law_id": 594,
+    "description": "Local Savings Banks",
+    "chapter_number": "79:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=594"
+  },
+  {
+    "law_id": 406,
+    "description": "Magistrates Protection",
+    "chapter_number": "6:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=406"
+  },
+  {
+    "law_id": 1030,
+    "description": "Maintenance Orders (Facilities for Enforcement)",
+    "chapter_number": "45:53",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1030"
+  },
+  {
+    "law_id": 238,
+    "description": "Malaria Abatement",
+    "chapter_number": "28:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=238"
+  },
+  {
+    "law_id": 460,
+    "description": "Malicious Damage",
+    "chapter_number": "11:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=460"
+  },
+  {
+    "law_id": 1104,
+    "description": "Management Development Centre",
+    "chapter_number": "85:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1104"
+  },
+  {
+    "law_id": 976,
+    "description": "Marine Areas (Preservation and Enhancement)",
+    "chapter_number": "37:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=976"
+  },
+  {
+    "law_id": 842,
+    "description": "Mariners Club",
+    "chapter_number": "50:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=842"
+  },
+  {
+    "law_id": 834,
+    "description": "Marking of Ships",
+    "chapter_number": "50:09",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=834"
+  },
+  {
+    "law_id": 1044,
+    "description": "Marriage",
+    "chapter_number": "45:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1044"
+  },
+  {
+    "law_id": 1020,
+    "description": "Married Persons",
+    "chapter_number": "45:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1020"
+  },
+  {
+    "law_id": 824,
+    "description": "Maternity Protection",
+    "chapter_number": "45:57",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=824"
+  },
+  {
+    "law_id": 1026,
+    "description": "Matrimonial Proceedings and Property",
+    "chapter_number": "45:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1026"
+  },
+  {
+    "law_id": 856,
+    "description": "Maxi-Taxi",
+    "chapter_number": "48:53",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=856"
+  },
+  {
+    "law_id": 412,
+    "description": "Mediation",
+    "chapter_number": "5:32",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=412"
+  },
+  {
+    "law_id": 226,
+    "description": "Medical Board",
+    "chapter_number": "29:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=226"
+  },
+  {
+    "law_id": 218,
+    "description": "Mental Health",
+    "chapter_number": "28:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=218"
+  },
+  {
+    "law_id": 636,
+    "description": "Mercantile Law",
+    "chapter_number": "82:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=636"
+  },
+  {
+    "law_id": 91371,
+    "description": "Metrology",
+    "chapter_number": "82:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=91371"
+  },
+  {
+    "law_id": 340,
+    "description": "Military Training (Prohibition)",
+    "chapter_number": "15:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=340"
+  },
+  {
+    "law_id": 904,
+    "description": "Minerals",
+    "chapter_number": "61:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=904"
+  },
+  {
+    "law_id": 1074,
+    "description": "Minimum Wages",
+    "chapter_number": "88:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1074"
+  },
+  {
+    "law_id": 906,
+    "description": "Mining Compensation",
+    "chapter_number": "61:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=906"
+  },
+  {
+    "law_id": 752,
+    "description": "Minister of Finance (Incorporation)",
+    "chapter_number": "69:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=752"
+  },
+  {
+    "law_id": 574,
+    "description": "Miscellaneous Taxes",
+    "chapter_number": "77:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=574"
+  },
+  {
+    "law_id": 654,
+    "description": "Misrepresentation",
+    "chapter_number": "82:35",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=654"
+  },
+  {
+    "law_id": 1116,
+    "description": "Moneylenders",
+    "chapter_number": "84:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1116"
+  },
+  {
+    "law_id": 744,
+    "description": "Mongoose",
+    "chapter_number": "67:55",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=744"
+  },
+  {
+    "law_id": 154,
+    "description": "Motion Picture Films (Carriage and Storage)",
+    "chapter_number": "20:11",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=154"
+  },
+  {
+    "law_id": 836,
+    "description": "Motor Launches",
+    "chapter_number": "50:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=836"
+  },
+  {
+    "law_id": 796,
+    "description": "Motor Vehicles and Road Traffic",
+    "chapter_number": "48:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=796"
+  },
+  {
+    "law_id": 858,
+    "description": "Motor Vehicles and Road Traffic (Enforcement and Administration)",
+    "chapter_number": "48:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=858"
+  },
+  {
+    "law_id": 798,
+    "description": "Motor Vehicles Insurance (Third Party Risks)",
+    "chapter_number": "48:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=798"
+  },
+  {
+    "law_id": 130,
+    "description": "Municipal Corporations",
+    "chapter_number": "25:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=130"
+  },
+  {
+    "law_id": 132,
+    "description": "Municipal Corporations (Pensions)",
+    "chapter_number": "25:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=132"
+  },
+  {
+    "law_id": 1050,
+    "description": "Muslim Marriage and Divorce",
+    "chapter_number": "45:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1050"
+  },
+  {
+    "law_id": 284,
+    "description": "Mutual Assistance in Criminal Matters",
+    "chapter_number": "11:24",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=284"
+  },
+  {
+    "law_id": 1016,
+    "description": "Naparima Bowl",
+    "chapter_number": "40:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1016"
+  },
+  {
+    "law_id": 690,
+    "description": "National Agricultural Marketing and Development Corporation",
+    "chapter_number": "63:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=690"
+  },
+  {
+    "law_id": 1036,
+    "description": "National Carnival Commission of Trinidad and Tobago",
+    "chapter_number": "42:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1036"
+  },
+  {
+    "law_id": 786,
+    "description": "National Development (Inter-American Development Bank) Loans",
+    "chapter_number": "71:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=786"
+  },
+  {
+    "law_id": 784,
+    "description": "National Development (International Bank for Reconstruction and Development) Loans",
+    "chapter_number": "71:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=784"
+  },
+  {
+    "law_id": 328,
+    "description": "National Emblems of Trinidad and Tobago (Regulation)",
+    "chapter_number": "19:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=328"
+  },
+  {
+    "law_id": 1010,
+    "description": "National Institute of Higher Education (Research, Science and Technology)",
+    "chapter_number": "39:58",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1010"
+  },
+  {
+    "law_id": 204,
+    "description": "National Insurance",
+    "chapter_number": "32:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=204"
+  },
+  {
+    "law_id": 1012,
+    "description": "National Library and Information Systems",
+    "chapter_number": "40:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1012"
+  },
+  {
+    "law_id": 148,
+    "description": "National Lotteries",
+    "chapter_number": "21:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=148"
+  },
+  {
+    "law_id": 1018,
+    "description": "National Museum and Art Gallery",
+    "chapter_number": "40:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1018"
+  },
+  {
+    "law_id": 896,
+    "description": "National Petroleum Company",
+    "chapter_number": "62:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=896"
+  },
+  {
+    "law_id": 988,
+    "description": "National Trust of Trinidad and Tobago",
+    "chapter_number": "40:53",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=988"
+  },
+  {
+    "law_id": 610,
+    "description": "Negotiable Instruments (Dishonoured Cheques)",
+    "chapter_number": "79:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=610"
+  },
+  {
+    "law_id": 332,
+    "description": "Newspapers",
+    "chapter_number": "20:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=332"
+  },
+  {
+    "law_id": 394,
+    "description": "Notaries Public",
+    "chapter_number": "6:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=394"
+  },
+  {
+    "law_id": 1046,
+    "description": "Notification of Births",
+    "chapter_number": "44:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1046"
+  },
+  {
+    "law_id": 186,
+    "description": "Nursing Personnel",
+    "chapter_number": "29:53",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=186"
+  },
+  {
+    "law_id": 386,
+    "description": "Oaths",
+    "chapter_number": "7:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=386"
+  },
+  {
+    "law_id": 390,
+    "description": "Oaths of Office",
+    "chapter_number": "7:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=390"
+  },
+  {
+    "law_id": 1066,
+    "description": "Occupational Safety and Health",
+    "chapter_number": "88:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1066"
+  },
+  {
+    "law_id": 456,
+    "description": "Offences Against the Person",
+    "chapter_number": "11:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=456"
+  },
+  {
+    "law_id": 898,
+    "description": "Oil Mining (High Water Mark)",
+    "chapter_number": "62:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=898"
+  },
+  {
+    "law_id": 974,
+    "description": "Oil Pollution of Territorial Waters",
+    "chapter_number": "37:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=974"
+  },
+  {
+    "law_id": 1118,
+    "description": "Old Metal and Marine Stores",
+    "chapter_number": "84:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1118"
+  },
+  {
+    "law_id": 526,
+    "description": "Ombudsman",
+    "chapter_number": "2:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=526"
+  },
+  {
+    "law_id": 190,
+    "description": "Opticians (Registration)",
+    "chapter_number": "29:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=190"
+  },
+  {
+    "law_id": 310,
+    "description": "Order of the Caribbean Community",
+    "chapter_number": "17:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=310"
+  },
+  {
+    "law_id": 1022,
+    "description": "Orisa Marriage",
+    "chapter_number": "45:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1022"
+  },
+  {
+    "law_id": 630,
+    "description": "Partnership",
+    "chapter_number": "81:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=630"
+  },
+  {
+    "law_id": 1150,
+    "description": "Patents",
+    "chapter_number": "82:76",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1150"
+  },
+  {
+    "law_id": 1130,
+    "description": "Patents and Designs",
+    "chapter_number": "82:83",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1130"
+  },
+  {
+    "law_id": 1132,
+    "description": "Patents, Designs, Copyright and Trade Marks (Emergency)",
+    "chapter_number": "82:84",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1132"
+  },
+  {
+    "law_id": 1114,
+    "description": "Pawnbrokers",
+    "chapter_number": "84:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1114"
+  },
+  {
+    "law_id": 126,
+    "description": "Pensions",
+    "chapter_number": "23:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=126"
+  },
+  {
+    "law_id": 128,
+    "description": "Pensions Extension",
+    "chapter_number": "23:53",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=128"
+  },
+  {
+    "law_id": 118,
+    "description": "Pensions Rights (Special Provisions)",
+    "chapter_number": "23:56",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=118"
+  },
+  {
+    "law_id": 444,
+    "description": "Perjury",
+    "chapter_number": "11:14",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=444"
+  },
+  {
+    "law_id": 178,
+    "description": "Pesticides and Toxic Chemicals",
+    "chapter_number": "30:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=178"
+  },
+  {
+    "law_id": 894,
+    "description": "Petroleum",
+    "chapter_number": "62:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=894"
+  },
+  {
+    "law_id": 892,
+    "description": "Petroleum Production Levy and Subsidy",
+    "chapter_number": "62:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=892"
+  },
+  {
+    "law_id": 556,
+    "description": "Petroleum Taxes",
+    "chapter_number": "75:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=556"
+  },
+  {
+    "law_id": 668,
+    "description": "Petrotrin Pensions",
+    "chapter_number": "62:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=668"
+  },
+  {
+    "law_id": 670,
+    "description": "Petrotrin Vesting",
+    "chapter_number": "62:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=670"
+  },
+  {
+    "law_id": 510,
+    "description": "Petty Civil Courts",
+    "chapter_number": "4:21",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=510"
+  },
+  {
+    "law_id": 192,
+    "description": "Pharmacy Board",
+    "chapter_number": "29:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=192"
+  },
+  {
+    "law_id": 828,
+    "description": "Pilotage",
+    "chapter_number": "51:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=828"
+  },
+  {
+    "law_id": 936,
+    "description": "Pipelines",
+    "chapter_number": "35:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=936"
+  },
+  {
+    "law_id": 696,
+    "description": "Plant (Export Prohibition)",
+    "chapter_number": "63:54",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=696"
+  },
+  {
+    "law_id": 692,
+    "description": "Plant Protection",
+    "chapter_number": "63:56",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=692"
+  },
+  {
+    "law_id": 338,
+    "description": "Police Complaints Authority",
+    "chapter_number": "15:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=338"
+  },
+  {
+    "law_id": 272,
+    "description": "Police Service",
+    "chapter_number": "15:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=272"
+  },
+  {
+    "law_id": 830,
+    "description": "Port Authority",
+    "chapter_number": "51:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=830"
+  },
+  {
+    "law_id": 588,
+    "description": "Post Office Savings Bank",
+    "chapter_number": "79:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=588"
+  },
+  {
+    "law_id": 734,
+    "description": "Pounds",
+    "chapter_number": "67:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=734"
+  },
+  {
+    "law_id": 476,
+    "description": "Praedial Larceny Prevention",
+    "chapter_number": "10:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=476"
+  },
+  {
+    "law_id": 514,
+    "description": "President's Emoluments",
+    "chapter_number": "2:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=514"
+  },
+  {
+    "law_id": 450,
+    "description": "Prevention of Corruption",
+    "chapter_number": "11:11",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=450"
+  },
+  {
+    "law_id": 454,
+    "description": "Prevention of Crime (Offensive Weapons)",
+    "chapter_number": "11:09",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=454"
+  },
+  {
+    "law_id": 480,
+    "description": "Prevention of Crimes",
+    "chapter_number": "10:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=480"
+  },
+  {
+    "law_id": 528,
+    "description": "Prime Minister's Pension",
+    "chapter_number": "2:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=528"
+  },
+  {
+    "law_id": 77867,
+    "description": "Princess Elizabeth Home for\nHandicapped Children Association (Incorporation)",
+    "chapter_number": "29:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=77867"
+  },
+  {
+    "law_id": 246,
+    "description": "Prisons",
+    "chapter_number": "13:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=246"
+  },
+  {
+    "law_id": 248,
+    "description": "Prison Service",
+    "chapter_number": "13:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=248"
+  },
+  {
+    "law_id": 230,
+    "description": "Private Hospitals",
+    "chapter_number": "29:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=230"
+  },
+  {
+    "law_id": 354,
+    "description": "Privileges and Immunities (Diplomatic, Consular and International Organisations)",
+    "chapter_number": "17:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=354"
+  },
+  {
+    "law_id": 260,
+    "description": "Probation of Offenders",
+    "chapter_number": "13:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=260"
+  },
+  {
+    "law_id": 286,
+    "description": "Proceeds of Crime",
+    "chapter_number": "11:27",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=286"
+  },
+  {
+    "law_id": 704,
+    "description": "Production of Cane",
+    "chapter_number": "64:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=704"
+  },
+  {
+    "law_id": 1052,
+    "description": "Professions Related to Medicine",
+    "chapter_number": "90:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1052"
+  },
+  {
+    "law_id": 576,
+    "description": "Property Tax",
+    "chapter_number": "76:04 (This Act repealed and replaced the Land and Building Taxes Act No 14 of 1920) (see alert)",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=576"
+  },
+  {
+    "law_id": 656,
+    "description": "Protection Against Unfair Competition",
+    "chapter_number": "82:36",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=656"
+  },
+  {
+    "law_id": 1148,
+    "description": "Protection of New Plant Varieties",
+    "chapter_number": "82:75",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1148"
+  },
+  {
+    "law_id": 972,
+    "description": "Protection of Wrecks",
+    "chapter_number": "37:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=972"
+  },
+  {
+    "law_id": 140,
+    "description": "Protective Services (Compensation)",
+    "chapter_number": "23:60",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=140"
+  },
+  {
+    "law_id": 120,
+    "description": "Provident Fund",
+    "chapter_number": "23:57",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=120"
+  },
+  {
+    "law_id": 570,
+    "description": "Provisional Collection of Taxes",
+    "chapter_number": "74:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=570"
+  },
+  {
+    "law_id": 200,
+    "description": "Public Assistance",
+    "chapter_number": "32:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=200"
+  },
+  {
+    "law_id": 1146,
+    "description": "Publications (Legal Deposit)",
+    "chapter_number": "82:74",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1146"
+  },
+  {
+    "law_id": 216,
+    "description": "Public Health (Nursery Schools and Primary Schools Immunisation)",
+    "chapter_number": "28:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=216"
+  },
+  {
+    "law_id": 322,
+    "description": "Public Holidays and Festivals",
+    "chapter_number": "19:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=322"
+  },
+  {
+    "law_id": 802,
+    "description": "Public Transport Service",
+    "chapter_number": "48:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=802"
+  },
+  {
+    "law_id": 80413,
+    "description": "Purchase of Certain Rights (HCU)",
+    "chapter_number": "71:44",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=80413"
+  },
+  {
+    "law_id": 212,
+    "description": "Quarantine",
+    "chapter_number": "28:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=212"
+  },
+  {
+    "law_id": 1014,
+    "description": "Queen's Hall",
+    "chapter_number": "40:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1014"
+  },
+  {
+    "law_id": 1038,
+    "description": "Queen's Park",
+    "chapter_number": "41:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1038"
+  },
+  {
+    "law_id": 150,
+    "description": "Races",
+    "chapter_number": "21:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=150"
+  },
+  {
+    "law_id": 566,
+    "description": "Rates and Charges Recovery",
+    "chapter_number": "74:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=566"
+  },
+  {
+    "law_id": 568,
+    "description": "Rates, Taxes and Licences (Payment by Cheque)",
+    "chapter_number": "74:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=568"
+  },
+  {
+    "law_id": 80345,
+    "description": "Real Property",
+    "chapter_number": "56:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=80345"
+  },
+  {
+    "law_id": 80303,
+    "description": "Real Property Limitation",
+    "chapter_number": "56:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=80303"
+  },
+  {
+    "law_id": 506,
+    "description": "Recording of Court Proceedings",
+    "chapter_number": "4:31",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=506"
+  },
+  {
+    "law_id": 998,
+    "description": "Recreation Grounds and Pastures",
+    "chapter_number": "41:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=998"
+  },
+  {
+    "law_id": 1062,
+    "description": "Recruiting of Workers",
+    "chapter_number": "88:10",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1062"
+  },
+  {
+    "law_id": 228,
+    "description": "Regional Health Authorities",
+    "chapter_number": "29:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=228"
+  },
+  {
+    "law_id": 1040,
+    "description": "Registers of Births, Deaths and Marriages",
+    "chapter_number": "44:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1040"
+  },
+  {
+    "law_id": 326,
+    "description": "Registrar General",
+    "chapter_number": "19:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=326"
+  },
+  {
+    "law_id": 1134,
+    "description": "Registration of Business Names",
+    "chapter_number": "82:85",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1134"
+  },
+  {
+    "law_id": 160,
+    "description": "Registration of Clubs",
+    "chapter_number": "21:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=160"
+  },
+  {
+    "law_id": 324,
+    "description": "Registration of Deeds",
+    "chapter_number": "19:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=324"
+  },
+  {
+    "law_id": 336,
+    "description": "Registration of Local Agents of Foreign Governments or Foreign Enterprises",
+    "chapter_number": "19:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=336"
+  },
+  {
+    "law_id": 870,
+    "description": "Regulated Industries Commission",
+    "chapter_number": "54:73",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=870"
+  },
+  {
+    "law_id": 492,
+    "description": "Remedies of Creditors",
+    "chapter_number": "8:09",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=492"
+  },
+  {
+    "law_id": 258,
+    "description": "Remission of Penalties",
+    "chapter_number": "13:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=258"
+  },
+  {
+    "law_id": 912,
+    "description": "Rent Restriction (Dwelling Houses)",
+    "chapter_number": "59:55",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=912"
+  },
+  {
+    "law_id": 910,
+    "description": "Rent Restriction (Serviced Premises)",
+    "chapter_number": "59:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=910"
+  },
+  {
+    "law_id": 920,
+    "description": "Rent Restriction (Short Tenancies)",
+    "chapter_number": "59:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=920"
+  },
+  {
+    "law_id": 520,
+    "description": "Representation of the People",
+    "chapter_number": "2:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=520"
+  },
+  {
+    "law_id": 452,
+    "description": "Restriction of Offensive Weapons",
+    "chapter_number": "11:10",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=452"
+  },
+  {
+    "law_id": 864,
+    "description": "Resumption of Land",
+    "chapter_number": "57:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=864"
+  },
+  {
+    "law_id": 364,
+    "description": "Retiring Allowances (Diplomatic Service)",
+    "chapter_number": "17:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=364"
+  },
+  {
+    "law_id": 516,
+    "description": "Retiring Allowances (Legislative Service)",
+    "chapter_number": "2:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=516"
+  },
+  {
+    "law_id": 1058,
+    "description": "Retrenchment and Severance Benefits",
+    "chapter_number": "88:13",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1058"
+  },
+  {
+    "law_id": 462,
+    "description": "Riot",
+    "chapter_number": "11:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=462"
+  },
+  {
+    "law_id": 1106,
+    "description": "Rural Pedlars",
+    "chapter_number": "84:09",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1106"
+  },
+  {
+    "law_id": 660,
+    "description": "Sale of Goods",
+    "chapter_number": "82:30",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=660"
+  },
+  {
+    "law_id": 684,
+    "description": "Sale of Produce",
+    "chapter_number": "63:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=684"
+  },
+  {
+    "law_id": 1108,
+    "description": "San Fernando and Arima Hucksters, Pedlars and Porters",
+    "chapter_number": "84:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1108"
+  },
+  {
+    "law_id": 1000,
+    "description": "San Fernando Recreation Ground",
+    "chapter_number": "41:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1000"
+  },
+  {
+    "law_id": 730,
+    "description": "Sawmills",
+    "chapter_number": "66:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=730"
+  },
+  {
+    "law_id": 214,
+    "description": "Schools (Medical Inspection)",
+    "chapter_number": "28:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=214"
+  },
+  {
+    "law_id": 1136,
+    "description": "Securities",
+    "chapter_number": "83:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1136"
+  },
+  {
+    "law_id": 270,
+    "description": "Security Assistance (Caricom)",
+    "chapter_number": "14:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=270"
+  },
+  {
+    "law_id": 464,
+    "description": "Sedition",
+    "chapter_number": "11:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=464"
+  },
+  {
+    "law_id": 198,
+    "description": "Senior Citizens' Pension",
+    "chapter_number": "32:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=198"
+  },
+  {
+    "law_id": 426,
+    "description": "Sentencing Commission",
+    "chapter_number": "4:32",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=426"
+  },
+  {
+    "law_id": 292,
+    "description": "Sexual Offences",
+    "chapter_number": "11:28",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=292"
+  },
+  {
+    "law_id": 832,
+    "description": "Shipping",
+    "chapter_number": "50:10",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=832"
+  },
+  {
+    "law_id": 1126,
+    "description": "Shop (Hours of Opening and Employment)",
+    "chapter_number": "84:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1126"
+  },
+  {
+    "law_id": 944,
+    "description": "Slum Clearance and Housing",
+    "chapter_number": "33:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=944"
+  },
+  {
+    "law_id": 342,
+    "description": "Special Reserve Police",
+    "chapter_number": "15:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=342"
+  },
+  {
+    "law_id": 1086,
+    "description": "Spirits and Spirit Compounds",
+    "chapter_number": "87:54",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1086"
+  },
+  {
+    "law_id": 990,
+    "description": "Sport and Culture Fund",
+    "chapter_number": "40:54",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=990"
+  },
+  {
+    "law_id": 580,
+    "description": "Stamp Duty",
+    "chapter_number": "76:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=580"
+  },
+  {
+    "law_id": 582,
+    "description": "Stamp Duty (Special Provisions)",
+    "chapter_number": "76:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=582"
+  },
+  {
+    "law_id": 638,
+    "description": "Standards",
+    "chapter_number": "82:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=638"
+  },
+  {
+    "law_id": 862,
+    "description": "State Grants and Leases (Re-Issue)",
+    "chapter_number": "57:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=862"
+  },
+  {
+    "law_id": 866,
+    "description": "State Land (Regularisation of Tenure)",
+    "chapter_number": "57:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=866"
+  },
+  {
+    "law_id": 860,
+    "description": "State Lands",
+    "chapter_number": "57:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=860"
+  },
+  {
+    "law_id": 376,
+    "description": "State Liability and Proceedings",
+    "chapter_number": "8:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=376"
+  },
+  {
+    "law_id": 316,
+    "description": "Statistics",
+    "chapter_number": "19:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=316"
+  },
+  {
+    "law_id": 818,
+    "description": "Status of Children",
+    "chapter_number": "46:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=818"
+  },
+  {
+    "law_id": 522,
+    "description": "Statutes",
+    "chapter_number": "3:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=522"
+  },
+  {
+    "law_id": 142,
+    "description": "Statutory Authorities",
+    "chapter_number": "24:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=142"
+  },
+  {
+    "law_id": 380,
+    "description": "Statutory Declarations",
+    "chapter_number": "7:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=380"
+  },
+  {
+    "law_id": 352,
+    "description": "Strategic Services Agency",
+    "chapter_number": "15:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=352"
+  },
+  {
+    "law_id": 146,
+    "description": "Street Collections (Control)",
+    "chapter_number": "21:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=146"
+  },
+  {
+    "law_id": 962,
+    "description": "Students' Revolving Loan Fund",
+    "chapter_number": "39:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=962"
+  },
+  {
+    "law_id": 488,
+    "description": "Succession",
+    "chapter_number": "9:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=488"
+  },
+  {
+    "law_id": 702,
+    "description": "Sugar Industry Labour Welfare Committee (Incorporation)",
+    "chapter_number": "64:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=702"
+  },
+  {
+    "law_id": 700,
+    "description": "Sugar Industry Special Funds",
+    "chapter_number": "64:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=700"
+  },
+  {
+    "law_id": 706,
+    "description": "Sugar Quotas",
+    "chapter_number": "64:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=706"
+  },
+  {
+    "law_id": 512,
+    "description": "Summary Courts",
+    "chapter_number": "4:20",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=512"
+  },
+  {
+    "law_id": 466,
+    "description": "Summary Offences",
+    "chapter_number": "11:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=466"
+  },
+  {
+    "law_id": 344,
+    "description": "Supplemental Police",
+    "chapter_number": "15:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=344"
+  },
+  {
+    "law_id": 500,
+    "description": "Supreme Court of Judicature",
+    "chapter_number": "4:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=500"
+  },
+  {
+    "law_id": 298,
+    "description": "Taking of Hostages",
+    "chapter_number": "12:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=298"
+  },
+  {
+    "law_id": 428,
+    "description": "Tax Appeal Board",
+    "chapter_number": "4:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=428"
+  },
+  {
+    "law_id": 578,
+    "description": "Taxes Exemption",
+    "chapter_number": "76:50 (Repealed by Act No. 18 of 2009 see alert)",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=578"
+  },
+  {
+    "law_id": 572,
+    "description": "Tax Information Exchange Agreements",
+    "chapter_number": "76:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=572"
+  },
+  {
+    "law_id": 984,
+    "description": "Teachers' Pensions",
+    "chapter_number": "39:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=984"
+  },
+  {
+    "law_id": 980,
+    "description": "Teaching Service (Compensation)",
+    "chapter_number": "39:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=980"
+  },
+  {
+    "law_id": 806,
+    "description": "Telecommunications",
+    "chapter_number": "47:31",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=806"
+  },
+  {
+    "law_id": 532,
+    "description": "Territorial Sea",
+    "chapter_number": "1:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=532"
+  },
+  {
+    "law_id": 672,
+    "description": "Textrin Vesting",
+    "chapter_number": "62:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=672"
+  },
+  {
+    "law_id": 158,
+    "description": "Theatres and Dance Halls",
+    "chapter_number": "21:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=158"
+  },
+  {
+    "law_id": 80299,
+    "description": "Three Chains",
+    "chapter_number": "57.04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=80299"
+  },
+  {
+    "law_id": 180,
+    "description": "Tobacco Control",
+    "chapter_number": "30:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=180"
+  },
+  {
+    "law_id": 334,
+    "description": "Tobago Deeds",
+    "chapter_number": "19:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=334"
+  },
+  {
+    "law_id": 144,
+    "description": "Tobago House of Assembly",
+    "chapter_number": "25:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=144"
+  },
+  {
+    "law_id": 1092,
+    "description": "Tourism and Industrial Development Company of Trinidad and Tobago Limited Vesting",
+    "chapter_number": "87:21",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1092"
+  },
+  {
+    "law_id": 1090,
+    "description": "Tourism Development",
+    "chapter_number": "87:22",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1090"
+  },
+  {
+    "law_id": 954,
+    "description": "Town and Country Planning",
+    "chapter_number": "35:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=954"
+  },
+  {
+    "law_id": 928,
+    "description": "Town and Country Planning (Miscellaneous Licences)",
+    "chapter_number": "35:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=928"
+  },
+  {
+    "law_id": 222,
+    "description": "Towns and Villages (Definition)",
+    "chapter_number": "26:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=222"
+  },
+  {
+    "law_id": 640,
+    "description": "Trade Descriptions",
+    "chapter_number": "82:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=640"
+  },
+  {
+    "law_id": 1080,
+    "description": "Trade Disputes and Protection of Property",
+    "chapter_number": "88:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1080"
+  },
+  {
+    "law_id": 1144,
+    "description": "Trade Marks",
+    "chapter_number": "82:81",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1144"
+  },
+  {
+    "law_id": 1078,
+    "description": "Trade Unions",
+    "chapter_number": "88:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1078"
+  },
+  {
+    "law_id": 266,
+    "description": "Trading with the Enemy",
+    "chapter_number": "14:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=266"
+  },
+  {
+    "law_id": 80397,
+    "description": "Trafficking in Persons",
+    "chapter_number": "12:10",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=80397"
+  },
+  {
+    "law_id": 304,
+    "description": "Transfer of Prisoners",
+    "chapter_number": "12:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=304"
+  },
+  {
+    "law_id": 166,
+    "description": "Transferred Officers Continuity of Service",
+    "chapter_number": "23:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=166"
+  },
+  {
+    "law_id": 124,
+    "description": "Travelling Allowances",
+    "chapter_number": "23:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=124"
+  },
+  {
+    "law_id": 468,
+    "description": "Treason",
+    "chapter_number": "11:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=468"
+  },
+  {
+    "law_id": 790,
+    "description": "Treasury Bills",
+    "chapter_number": "71:40",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=790"
+  },
+  {
+    "law_id": 554,
+    "description": "Treasury Bonds",
+    "chapter_number": "71:43",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=554"
+  },
+  {
+    "law_id": 788,
+    "description": "Treasury Notes",
+    "chapter_number": "71:39",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=788"
+  },
+  {
+    "law_id": 458,
+    "description": "Trespass",
+    "chapter_number": "11:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=458"
+  },
+  {
+    "law_id": 880,
+    "description": "Trinidad and Tobago Electricity Commission",
+    "chapter_number": "54:70",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=880"
+  },
+  {
+    "law_id": 620,
+    "description": "Trinidad and Tobago Free Zones",
+    "chapter_number": "81:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=620"
+  },
+  {
+    "law_id": 946,
+    "description": "Trinidad and Tobago Housing Development Corporation",
+    "chapter_number": "33:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=946"
+  },
+  {
+    "law_id": 952,
+    "description": "Trinidad and Tobago Housing Development Corporation (Vesting)",
+    "chapter_number": "33:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=952"
+  },
+  {
+    "law_id": 992,
+    "description": "Trinidad and Tobago National Steel Orchestra",
+    "chapter_number": "40:55",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=992"
+  },
+  {
+    "law_id": 674,
+    "description": "Trinidad and Tobago Oil Company Limited Vesting",
+    "chapter_number": "62:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=674"
+  },
+  {
+    "law_id": 109210,
+    "description": "Trinidad and Tobago Panama Partial Scope Trade Agreement",
+    "chapter_number": "81:14",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=109210"
+  },
+  {
+    "law_id": 810,
+    "description": "Trinidad and Tobago Post",
+    "chapter_number": "47:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=810"
+  },
+  {
+    "law_id": 804,
+    "description": "Trinidad and Tobago Postal Corporation",
+    "chapter_number": "47:02",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=804"
+  },
+  {
+    "law_id": 152,
+    "description": "Trinidad and Tobago Racing Authority",
+    "chapter_number": "21:50",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=152"
+  },
+  {
+    "law_id": 902,
+    "description": "Trinidad and Tobago Survey",
+    "chapter_number": "60:01",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=902"
+  },
+  {
+    "law_id": 1072,
+    "description": "Truck",
+    "chapter_number": "88:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1072"
+  },
+  {
+    "law_id": 236,
+    "description": "Tuberculosis Control",
+    "chapter_number": "28:51",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=236"
+  },
+  {
+    "law_id": 558,
+    "description": "Unemployment Levy",
+    "chapter_number": "75:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=558"
+  },
+  {
+    "law_id": 658,
+    "description": "Unfair Contract Terms",
+    "chapter_number": "82:37",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=658"
+  },
+  {
+    "law_id": 1122,
+    "description": "Unit Trust Corporation of Trinidad and Tobago",
+    "chapter_number": "83:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1122"
+  },
+  {
+    "law_id": 956,
+    "description": "University Students (Guarantee Fund)",
+    "chapter_number": "39:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=956"
+  },
+  {
+    "law_id": 916,
+    "description": "Valuation of Land",
+    "chapter_number": "58:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=916"
+  },
+  {
+    "law_id": 586,
+    "description": "Value Added Tax",
+    "chapter_number": "75:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=586"
+  },
+  {
+    "law_id": 234,
+    "description": "Venereal Disease",
+    "chapter_number": "28:52",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=234"
+  },
+  {
+    "law_id": 626,
+    "description": "Venture Capital",
+    "chapter_number": "81:08",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=626"
+  },
+  {
+    "law_id": 732,
+    "description": "Veterinary Surgeons (Registration)",
+    "chapter_number": "67:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=732"
+  },
+  {
+    "law_id": 268,
+    "description": "Visiting Forces",
+    "chapter_number": "14:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=268"
+  },
+  {
+    "law_id": 350,
+    "description": "Visiting Police Forces",
+    "chapter_number": "15:07",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=350"
+  },
+  {
+    "law_id": 122,
+    "description": "Voluntary Termination of Employment",
+    "chapter_number": "23:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=122"
+  },
+  {
+    "law_id": 876,
+    "description": "Water and Sewerage",
+    "chapter_number": "54:40",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=876"
+  },
+  {
+    "law_id": 878,
+    "description": "Waterworks and Water Conservation",
+    "chapter_number": "54:41",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=878"
+  },
+  {
+    "law_id": 844,
+    "description": "West Indies Shipping Corporation",
+    "chapter_number": "50:04",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=844"
+  },
+  {
+    "law_id": 114,
+    "description": "Widows' and Orphans' Pensions",
+    "chapter_number": "23:54",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=114"
+  },
+  {
+    "law_id": 116,
+    "description": "Widows' and Orphans' Pensions Extension",
+    "chapter_number": "23:55",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=116"
+  },
+  {
+    "law_id": 80253,
+    "description": "Wills and Probate",
+    "chapter_number": "9:03",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=80253"
+  },
+  {
+    "law_id": 614,
+    "description": "Workers' Bank",
+    "chapter_number": "79:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=614"
+  },
+  {
+    "law_id": 1076,
+    "description": "Workmen's Compensation",
+    "chapter_number": "88:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1076"
+  },
+  {
+    "law_id": 1070,
+    "description": "Workmen's Compensation (Transfer of Funds)",
+    "chapter_number": "88:06",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=1070"
+  },
+  {
+    "law_id": 252,
+    "description": "Young Offenders Detention",
+    "chapter_number": "13:05",
+    "detail_url": "https://laws.gov.tt/ttdll-web/revision/list?offset=0&currentid=252"
+  }
+]
