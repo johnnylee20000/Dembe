@@ -1,56 +1,116 @@
 # Dembe
 
-Build a task-focused AI agent blueprint from runtime context.
+Trinidad and Tobago legal AI assistant scaffold with RAG, vector search, agentic tools, and validation workflow.
 
-## What this project includes
+## Core deliverables in this repo
 
-- `ai_agent.py`: core data model and agent blueprint builder.
-- `build_agent_cli.py`: command line entry point for generating blueprints.
-- `sample_task.json`: example input based on the provided environment and request.
+- `tt_legal_agent/`: reusable package for chunk loading, embeddings + ChromaDB storage, retrieval, and answer synthesis.
+- `scripts/index_chunks.py`: embed and upsert markdown chunks into ChromaDB.
+- `scripts/ask_agent.py`: ask legal questions over indexed chunks.
+- `scripts/run_badal_test.py`: benchmark script for the "Badal test" style check.
+- `app_streamlit.py`: Streamlit chat UI for quick deployment.
+- `data/chunks/*.md`: sample T&T law/procedure chunks with citation metadata.
+- `requirements.txt`: Python dependencies.
 
-## Input format
+## Architecture implemented
 
-The CLI expects a JSON object with:
+1. **Generate embeddings and upsert to vector DB**
+   - Supports embedding backends:
+     - OpenAI (`text-embedding-3-small`)
+     - Local SentenceTransformers (`sentence-transformers/all-MiniLM-L6-v2`)
+   - Stores vectors in **ChromaDB**.
+   - Stores metadata with each chunk:
+     - `act_name`
+     - `chapter`
+     - `section`
+     - `url`
+     - `source_file`
 
-- `user_info` (object):
-  - `OS Version`
-  - `Shell`
-  - `Workspace Path`
-  - `Today's date`
-  - optional: `Is directory a git repo`, `Git repo`, `Terminals folder`
-- `user_query` (string): objective for the generated agent.
+2. **RAG pipeline**
+   - Semantic retrieval from ChromaDB.
+   - Context injection into strict legal system prompt.
+   - Synthesis with LLM (when `OPENAI_API_KEY` is configured).
+   - Safe fallback mode if key is absent (returns retrieved context and citations).
 
-## Usage
+3. **Strict system prompt**
+   - Located in `tt_legal_agent/system_prompt.py`.
+   - Enforces:
+     - context-only answers
+     - explicit unknown response when missing
+     - mandatory citations
+     - professional legal tone
 
-Generate to stdout:
+4. **Agentic tools**
+   - Gazette web search: `web_search_gazette(...)`
+   - Document summarizer: `summarize_document(...)`
+
+5. **Validation ("Badal test")**
+   - Script checks for key procedural concepts in answer:
+     - statement under caution
+     - justice of the peace
+     - authentication
+
+6. **Deployment surface**
+   - Streamlit UI included.
+   - Suitable for deployment on Render or similar Python app hosts.
+
+## Setup
 
 ```bash
-python3 build_agent_cli.py --input sample_task.json
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-Write to a file:
+## Index legal markdown chunks
+
+Local embeddings:
 
 ```bash
-python3 build_agent_cli.py --input sample_task.json --output agent_blueprint.json
+python3 scripts/index_chunks.py \
+  --chunks-dir data/chunks \
+  --persist-dir .chroma_tt_law \
+  --collection tt_law \
+  --embedding-backend local
 ```
 
-The output includes:
+OpenAI embeddings:
 
-- startup checks tailored to the environment
-- execution plan steps
-- a reusable system prompt for autonomous execution
+```bash
+export OPENAI_API_KEY="YOUR_KEY"
+python3 scripts/index_chunks.py \
+  --chunks-dir data/chunks \
+  --persist-dir .chroma_tt_law \
+  --collection tt_law \
+  --embedding-backend openai
+```
 
-## English-law legal AI benchmarking artifact
+## Ask a question (CLI)
 
-This repo now also contains:
+```bash
+python3 scripts/ask_agent.py \
+  --persist-dir .chroma_tt_law \
+  --collection tt_law \
+  --embedding-backend local \
+  --question "If a suspect makes an utterance during interview, what should happen before continuing?"
+```
 
-- `legal_ai_english_law_report.md`
-- `legal_ai_english_law_spec.json`
+## Run Badal benchmark
 
-It provides:
+```bash
+python3 scripts/run_badal_test.py \
+  --chroma-dir .chroma_tt_law \
+  --collection tt_law \
+  --embedding-backend local
+```
 
-- a top-5 list of legal AI platforms relevant to English-law workflows
-- a feature matrix showing the shared product structure
-- analysis of how each platform chunks legal information
-- a reusable chunk schema and pipeline you can apply to your own agent
-- a machine-readable JSON spec for direct code integration
+## Run Streamlit app
+
+```bash
+streamlit run app_streamlit.py
+```
+
+## Optional artifacts from prior work
+
+- `ai_agent.py`, `build_agent_cli.py`, `sample_task.json`: generic agent blueprint generator.
+- `legal_ai_english_law_report.md`, `legal_ai_english_law_spec.json`: legal AI benchmarking outputs.
