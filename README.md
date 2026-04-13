@@ -39,3 +39,16 @@ The output includes:
 - startup checks tailored to the environment
 - execution plan steps
 - a reusable system prompt for autonomous execution
+
+## English-law legal AI benchmarking artifact
+
+This repo now also contains:
+
+- `legal_ai_english_law_report.md`
+
+It provides:
+
+- a top-5 list of legal AI platforms relevant to English-law workflows
+- a feature matrix showing the shared product structure
+- analysis of how each platform chunks legal information
+- a reusable chunk schema and pipeline you can apply to your own agent
