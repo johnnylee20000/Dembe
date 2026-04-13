@@ -3,8 +3,8 @@
 This repository provides two Python utilities:
 
 1. `laws_scraper.py`
-   - Scrapes the Digital Legislative Library alphabetical Acts pages.
-   - Resolves each Act to its detail page.
+   - Scrapes the Digital Legislative Library revised Acts pages.
+   - Discovers and crawls Act detail records by `currentid`.
    - Prioritizes the latest **Consolidated** file (`type=act`).
    - Falls back to **Amending Legislation** when consolidated is unavailable.
    - Downloads PDFs and writes metadata CSV.
@@ -33,7 +33,7 @@ python3 laws_scraper.py \
 
 Key options:
 - `--crawl4ai`: use Crawl4AI for HTML fetch (if installed).
-- `--limit`: process only the first N alphabetical entries.
+- `--limit`: process only the first N discovered `currentid` records.
 - `--metadata-file`: output CSV file name inside output directory.
 - `--max-retries`: retries for transient request failures.
 

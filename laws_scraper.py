@@ -1,23 +1,18 @@
 #!/usr/bin/env python3
 """
-Scrape Acts from the Trinidad and Tobago Digital Legislative Library.
+Scrape Trinidad and Tobago laws from the Digital Legislative Library.
 
-Features:
-- Navigates the alphabetical Acts pages.
-- Resolves each listed Act to its detail page.
-- Prefers the latest consolidated version (type=act) for download.
-- Falls back to latest amending legislation if no consolidated version exists.
-- Saves metadata:
-  - Act Name
-  - Chapter Number
-  - Year of Commencement
-  - Source URL
-  - Selected file URL/category/label
-- Handles broken links and transient request failures.
-- Includes configurable request delay for polite rate limiting.
+Workflow:
+1) Discover Act detail identifiers (currentid) from revised list pages.
+2) Visit each Act detail page by currentid.
+3) Prefer latest consolidated file (type=act).
+4) Fallback to latest amending legislation when consolidated is unavailable.
+5) Save metadata and download PDFs.
 
-Optional:
-- If Crawl4AI is installed and --crawl4ai is provided, it is used to fetch HTML.
+Notes:
+- This site can return stale/default detail panels for some search-only URLs.
+  The scraper avoids title-only resolution and uses currentid-based URLs.
+- Crawl4AI is optional; requests+BeautifulSoup is the default path.
 """
 
 from __future__ import annotations
@@ -29,10 +24,9 @@ import logging
 import re
 import time
 from dataclasses import dataclass
-from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Optional
-from urllib.parse import parse_qs, quote_plus, urljoin, urlparse
+from urllib.parse import parse_qs, urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -41,19 +35,16 @@ try:
     from crawl4ai import AsyncWebCrawler  # type: ignore
 
     HAS_CRAWL4AI = True
-except Exception:  # pragma: no cover - optional dependency.
+except Exception:  # pragma: no cover
     HAS_CRAWL4AI = False
 
-BASE_URL = "https://laws.gov.tt"
-ALPHA_URL = f"{BASE_URL}/ttdll-web2/revision/bytitle"
-DETAIL_URL = f"{BASE_URL}/ttdll-web/revision/list"
 
+BASE_URL = "https://laws.gov.tt"
+LIST_URL = f"{BASE_URL}/ttdll-web/revision/list"
 USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 )
-
-ALPHA_LETTERS = tuple("abcdefghijklmnopqrstuvwxyz")
 
 
 @dataclass(frozen=True)
@@ -66,6 +57,7 @@ class DownloadCandidate:
 
 @dataclass
 class ActRecord:
+    current_id: int
     act_name: str
     chapter_number: str
     year_of_commencement: Optional[int]
@@ -80,6 +72,7 @@ class ActRecord:
 
     def as_csv_row(self) -> dict[str, str]:
         return {
+            "current_id": str(self.current_id),
             "act_name": self.act_name,
             "chapter_number": self.chapter_number,
             "year_of_commencement": str(self.year_of_commencement or ""),
@@ -163,8 +156,8 @@ class LawsTTScraper:
                 html = asyncio.run(self._fetch_with_crawl4ai(url))
                 self._sleep()
                 return html
-            except Exception as exc:  # pragma: no cover - optional path.
-                logging.warning("Crawl4AI fetch failed, falling back to requests for %s: %s", url, exc)
+            except Exception as exc:  # pragma: no cover
+                logging.warning("Crawl4AI failed; falling back to requests for %s: %s", url, exc)
         response = self._request(url)
         self._sleep()
         return response.text
@@ -175,12 +168,18 @@ class LawsTTScraper:
         return text.strip("_") or "unnamed"
 
     @staticmethod
-    def _normalize_whitespace(text: str) -> str:
-        return re.sub(r"\s+", " ", text).strip()
+    def _normalize_space(value: str) -> str:
+        return re.sub(r"\s+", " ", value).strip()
 
     @staticmethod
-    def _extract_chapter_number(text: str) -> str:
-        match = re.search(r"(?:Chap(?:ter)?\.?\s*)(\d+[:.]\d+)", text, flags=re.IGNORECASE)
+    def _extract_chapter(text: str) -> str:
+        match = re.search(
+            r"(?:Chap(?:ter)?\.?\s*)(\d+[:.]\d+)",
+            text,
+            flags=re.IGNORECASE,
+        )
+        if not match:
+            match = re.search(r"\bCHAPTER\s+(\d+:\d+)\b", text, flags=re.IGNORECASE)
         return match.group(1) if match else ""
 
     @staticmethod
@@ -192,118 +191,19 @@ class LawsTTScraper:
         fallback = re.search(r"Year\s*-\s*(\d{4})", text, flags=re.IGNORECASE)
         return int(fallback.group(1)) if fallback else None
 
-    def _parse_alpha_page(
-        self, letter: str, offset: int
-    ) -> tuple[list[tuple[str, str, str]], Optional[int]]:
-        url = f"{ALPHA_URL}?q={quote_plus(letter)}&max=30&offset={offset}"
-        html = self._fetch_html(url)
-        soup = BeautifulSoup(html, "html.parser")
-
-        rows: list[tuple[str, str, str]] = []
-        for tr in soup.select("#list-acts tbody tr"):
-            tds = tr.find_all("td")
-            if len(tds) < 3:
-                continue
-            ref_text = self._normalize_whitespace(tds[1].get_text(" ", strip=True))
-            title_text = self._normalize_whitespace(tds[2].get_text(" ", strip=True))
-            download_link = tr.select_one("a[href*='/revision/download/']")
-            href = download_link.get("href", "").strip() if download_link else ""
-            if title_text:
-                rows.append((ref_text, title_text, href))
-
-        next_offset: Optional[int] = None
-        next_link = soup.select_one("ul.pagination li.next a.step")
-        if next_link:
-            href = next_link.get("href", "")
-            match = re.search(r"offset=(\d+)", href)
-            if match:
-                candidate = int(match.group(1))
-                if candidate > offset:
-                    next_offset = candidate
-
-        return rows, next_offset
-
-    def gather_alphabetical_acts(self, max_pages_per_letter: int = 400) -> list[dict[str, str]]:
-        """
-        Returns a deduplicated list of act hints from the alphabetical pages.
-        """
-        all_rows: list[dict[str, str]] = []
-        seen_keys: set[tuple[str, str]] = set()
-
-        for letter in ALPHA_LETTERS:
-            offset = 0
-            pages = 0
-            while pages < max_pages_per_letter:
-                pages += 1
-                logging.info("Scanning alphabetical page letter=%s offset=%s", letter, offset)
-                rows, next_offset = self._parse_alpha_page(letter, offset)
-                if not rows:
-                    break
-
-                for ref, title, alpha_href in rows:
-                    key = (title.lower(), ref.lower())
-                    if key in seen_keys:
-                        continue
-                    seen_keys.add(key)
-                    all_rows.append(
-                        {
-                            "reference": ref,
-                            "title": title,
-                            "alpha_download_href": alpha_href,
-                        }
-                    )
-
-                if next_offset is None:
-                    break
-                offset = next_offset
-
-        return all_rows
-
-    def _detail_page_url_from_title(self, title: str) -> str:
-        return f"{DETAIL_URL}?offset=0&q={quote_plus(title)}"
-
     @staticmethod
-    def _extract_currentid_candidates(search_soup: BeautifulSoup) -> list[tuple[int, str]]:
-        candidates: list[tuple[int, str]] = []
-        for anchor in search_soup.select("#law-list a[href*='currentid=']"):
-            href = anchor.get("href", "")
-            match = re.search(r"currentid=(\d+)", href)
-            if not match:
-                continue
-            current_id = int(match.group(1))
-            title = re.sub(r"\s+", " ", anchor.get_text(" ", strip=True)).strip()
-            candidates.append((current_id, title))
-        return candidates
-
-    def _resolve_detail_page(self, title: str) -> tuple[str, BeautifulSoup]:
-        search_url = self._detail_page_url_from_title(title)
-        search_html = self._fetch_html(search_url)
-        search_soup = BeautifulSoup(search_html, "html.parser")
-
-        candidates = self._extract_currentid_candidates(search_soup)
-        if not candidates:
-            return search_url, search_soup
-
-        best_id = max(
-            candidates,
-            key=lambda item: SequenceMatcher(
-                a=item[1].lower(),
-                b=title.lower(),
-            ).ratio(),
-        )[0]
-        detail_url = f"{DETAIL_URL}?offset=0&q={quote_plus(title)}&currentid={best_id}#email-content"
-        detail_html = self._fetch_html(detail_url)
-        return detail_url, BeautifulSoup(detail_html, "html.parser")
-
-    @staticmethod
-    def _extract_act_name(detail_soup: BeautifulSoup, fallback_title: str) -> str:
+    def _extract_act_name(detail_soup: BeautifulSoup) -> str:
         heading = detail_soup.select_one("#law-detail h4 a") or detail_soup.select_one("h4 a")
-        if heading:
-            value = heading.get_text(" ", strip=True)
-            value = re.sub(r"\s+Chap\.?\s*\d+[:.]\d+\s*$", "", value, flags=re.IGNORECASE).strip()
-            if value:
-                return value
-        return fallback_title
+        if not heading:
+            return "Unknown Act"
+        value = heading.get_text(" ", strip=True)
+        value = re.sub(r"\s+Chap\.?\s*\d+[:.]\d+\s*$", "", value, flags=re.IGNORECASE).strip()
+        return value or "Unknown Act"
+
+    @staticmethod
+    def _extract_heading_text(detail_soup: BeautifulSoup) -> str:
+        heading = detail_soup.select_one("#law-detail h4 a") or detail_soup.select_one("h4 a")
+        return heading.get_text(" ", strip=True) if heading else ""
 
     @staticmethod
     def _extract_candidates(detail_soup: BeautifulSoup) -> tuple[list[DownloadCandidate], list[DownloadCandidate]]:
@@ -317,6 +217,7 @@ class LawsTTScraper:
             href = anchor.get("href", "").strip()
             if not href:
                 continue
+
             file_url = urljoin(BASE_URL, href)
             file_type = parse_qs(urlparse(file_url).query).get("type", [""])[0]
             label_node = item.select_one("strong.block")
@@ -336,13 +237,13 @@ class LawsTTScraper:
 
     @staticmethod
     def _choose_latest(candidates: list[DownloadCandidate]) -> Optional[DownloadCandidate]:
-        # On this site, lists are ordered newest-first.
+        # Lists on these pages are newest-first.
         return candidates[0] if candidates else None
 
     def _download_file(self, candidate: DownloadCandidate, act_name: str, chapter: str) -> tuple[str, str]:
         chapter_part = chapter or "nochapter"
-        category_part = "consolidated" if candidate.category == "consolidated" else "amendment"
-        filename = f"{self._safe_filename_component(act_name)}_{chapter_part}_{category_part}.pdf"
+        kind = "consolidated" if candidate.category == "consolidated" else "amendment"
+        filename = f"{self._safe_filename_component(act_name)}_{chapter_part}_{kind}.pdf"
         path = self.pdf_dir / filename
         try:
             response = self._request(candidate.url, stream=True)
@@ -356,23 +257,83 @@ class LawsTTScraper:
             logging.error("Broken link or download error for %s: %s", candidate.url, exc)
             return "broken_link", ""
 
+    def discover_current_ids(
+        self,
+        *,
+        max_offset: int = 5000,
+        step: int = 10,
+        target_count: Optional[int] = None,
+    ) -> list[int]:
+        """
+        Crawl revised list offsets and collect currentid values.
+        """
+        all_ids: set[int] = set()
+        stale_pages = 0
+        consecutive_errors = 0
+
+        for offset in range(0, max_offset + 1, step):
+            page_url = f"{LIST_URL}?offset={offset}"
+            logging.info("Scanning revised list offset=%s", offset)
+            try:
+                html = self._fetch_html(page_url)
+            except Exception as exc:
+                consecutive_errors += 1
+                logging.warning(
+                    "Skipping offset=%s due to repeated server error (%s/%s): %s",
+                    offset,
+                    consecutive_errors,
+                    3,
+                    exc,
+                )
+                if consecutive_errors >= 3:
+                    break
+                continue
+            consecutive_errors = 0
+
+            page_ids = {int(v) for v in re.findall(r"currentid=(\d+)", html)}
+            previous_count = len(all_ids)
+            all_ids.update(page_ids)
+            added = len(all_ids) - previous_count
+
+            if target_count is not None and len(all_ids) >= target_count:
+                break
+
+            if added == 0:
+                stale_pages += 1
+            else:
+                stale_pages = 0
+
+            # After enough empty-growth pages, stop probing.
+            if offset >= 500 and stale_pages >= 20:
+                break
+
+        return sorted(all_ids)
+
+    def _detail_url(self, current_id: int) -> str:
+        # currentid is the reliable selector for the active Act panel.
+        return f"{LIST_URL}?offset=0&q=&currentid={current_id}#email-content"
+
     def scrape(self, limit: Optional[int] = None) -> list[ActRecord]:
-        act_hints = self.gather_alphabetical_acts()
-        logging.info("Discovered %s unique alphabetical entries", len(act_hints))
+        current_ids = self.discover_current_ids(target_count=limit)
+        logging.info("Discovered %s unique currentid values", len(current_ids))
         if limit is not None:
-            act_hints = act_hints[:limit]
+            current_ids = current_ids[:limit]
 
         records: list[ActRecord] = []
-        for idx, hint in enumerate(act_hints, start=1):
-            title = hint["title"]
-            ref = hint["reference"]
-            logging.info("[%s/%s] Processing %s", idx, len(act_hints), title)
+        for idx, current_id in enumerate(current_ids, start=1):
+            detail_url = self._detail_url(current_id)
+            logging.info("[%s/%s] Processing currentid=%s", idx, len(current_ids), current_id)
 
             try:
-                detail_url, soup = self._resolve_detail_page(title)
+                html = self._fetch_html(detail_url)
+                soup = BeautifulSoup(html, "html.parser")
 
-                act_name = self._extract_act_name(soup, fallback_title=title)
-                chapter = self._extract_chapter_number(soup.get_text(" ", strip=True)) or self._extract_chapter_number(ref)
+                act_name = self._extract_act_name(soup)
+                heading_text = self._extract_heading_text(soup)
+                chapter = self._extract_chapter(heading_text)
+                if not chapter:
+                    all_text = soup.get_text(" ", strip=True)
+                    chapter = self._extract_chapter(all_text)
                 year = self._extract_year(soup)
                 consolidated, amendments = self._extract_candidates(soup)
 
@@ -383,30 +344,13 @@ class LawsTTScraper:
                     if chosen:
                         note = "No consolidated version found; used latest amending legislation."
                     else:
-                        alpha_href = hint.get("alpha_download_href", "")
-                        if alpha_href:
-                            alpha_url = urljoin(BASE_URL, alpha_href)
-                            alpha_type = parse_qs(urlparse(alpha_url).query).get("type", [""])[0]
-                            chosen = DownloadCandidate(
-                                url=alpha_url,
-                                label="Alphabetical listing download",
-                                as_at_text="",
-                                category="consolidated"
-                                if alpha_type == "act"
-                                else "amending_legislation",
-                            )
-                            note = (
-                                "No PDF listed on detail page; used alphabetical listing "
-                                "download link fallback."
-                            )
-                        else:
-                            note = "No PDF listed on detail page."
+                        note = "No downloadable PDF candidates found."
 
                 if chosen:
                     status, local_file = self._download_file(chosen, act_name, chapter)
                     selected_url = chosen.url
-                    selected_label = chosen.label
-                    selected_as_at = chosen.as_at_text
+                    selected_label = self._normalize_space(chosen.label)
+                    selected_as_at = self._normalize_space(chosen.as_at_text)
                     selected_category = chosen.category
                 else:
                     status = "missing_pdf"
@@ -418,6 +362,7 @@ class LawsTTScraper:
 
                 records.append(
                     ActRecord(
+                        current_id=current_id,
                         act_name=act_name,
                         chapter_number=chapter,
                         year_of_commencement=year,
@@ -432,10 +377,11 @@ class LawsTTScraper:
                     )
                 )
             except Exception as exc:
-                logging.exception("Failed processing %s: %s", title, exc)
+                logging.exception("Failed processing currentid=%s: %s", current_id, exc)
                 records.append(
                     ActRecord(
-                        act_name=title,
+                        current_id=current_id,
+                        act_name="",
                         chapter_number="",
                         year_of_commencement=None,
                         source_page_url=detail_url,
@@ -453,6 +399,7 @@ class LawsTTScraper:
 
     def write_metadata(self, records: list[ActRecord], metadata_path: Path) -> None:
         fieldnames = [
+            "current_id",
             "act_name",
             "chapter_number",
             "year_of_commencement",
@@ -475,20 +422,19 @@ class LawsTTScraper:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
-            "Scrape laws.gov.tt alphabetical Acts list; download consolidated PDFs "
-            "with amendment fallback and write metadata."
+            "Scrape laws.gov.tt revised Acts with consolidated-first and amendment fallback."
         )
     )
     parser.add_argument("--output-dir", default="data/laws_tt", help="Output directory.")
     parser.add_argument("--metadata-file", default="metadata.csv", help="Metadata CSV filename.")
-    parser.add_argument("--delay-seconds", type=float, default=1.25, help="Rate-limit delay between requests.")
+    parser.add_argument("--delay-seconds", type=float, default=1.25, help="Delay between requests.")
     parser.add_argument("--timeout-seconds", type=int, default=45, help="HTTP timeout seconds.")
     parser.add_argument("--max-retries", type=int, default=3, help="HTTP retry count.")
-    parser.add_argument("--limit", type=int, default=None, help="Optional cap on number of acts to process.")
+    parser.add_argument("--limit", type=int, default=None, help="Optional cap on records processed.")
     parser.add_argument(
         "--crawl4ai",
         action="store_true",
-        help="Use Crawl4AI for page retrieval when installed.",
+        help="Use Crawl4AI for HTML retrieval if installed.",
     )
     parser.add_argument(
         "--log-level",
