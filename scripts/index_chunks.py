@@ -3,9 +3,15 @@
 from __future__ import annotations
 
 import argparse
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from tt_legal_agent.chunker import load_markdown_chunks
-from tt_legal_agent.vector_store import TTVectorStore
+from tt_legal_agent.vector_store import EmbeddingConfig, TTVectorStore
 
 
 def parse_args() -> argparse.Namespace:
@@ -26,14 +32,16 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     chunks = load_markdown_chunks(args.chunks_dir)
-
+    embed_config = EmbeddingConfig(
+        backend=args.embedding_backend,
+        local_model=args.local_embedding_model,
+        openai_model=args.openai_embedding_model,
+        openai_api_key=args.openai_api_key,
+    )
     store = TTVectorStore(
         persist_directory=args.persist_dir,
         collection_name=args.collection,
-        embedding_backend=args.embedding_backend,
-        local_embedding_model=args.local_embedding_model,
-        openai_embedding_model=args.openai_embedding_model,
-        openai_api_key=args.openai_api_key,
+        embedding_config=embed_config,
     )
     count = store.upsert_chunks(chunks)
     print(

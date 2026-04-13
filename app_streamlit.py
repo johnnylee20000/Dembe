@@ -3,9 +3,15 @@
 from __future__ import annotations
 
 import streamlit as st
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from tt_legal_agent.rag_pipeline import TTRAGPipeline
-from tt_legal_agent.vector_store import TTVectorStore
+from tt_legal_agent.vector_store import EmbeddingConfig, TTVectorStore
 from tt_legal_agent.tools import summarize_document, web_search_gazette
 
 
@@ -42,9 +48,11 @@ def get_pipeline(
     store = TTVectorStore(
         persist_directory=persist_directory,
         collection_name=collection_name,
-        embedding_backend=embed_backend,
-        local_embedding_model=local_model,
-        openai_embedding_model=openai_model,
+        embedding_config=EmbeddingConfig(
+            backend=embed_backend,
+            local_model=local_model,
+            openai_model=openai_model,
+        ),
     )
     return TTRAGPipeline(vector_store=store, model=llm_model)
 

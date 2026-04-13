@@ -26,6 +26,8 @@ class LegalChunk:
             "chapter": self.chapter,
             "section": self.section,
             "url": self.url,
+            # Backward compatibility for callers expecting source_url.
+            "source_url": self.url,
             "source_file": self.source_file,
         }
 
@@ -67,8 +69,9 @@ def parse_markdown_chunk(path: Path) -> LegalChunk:
     )
 
 
-def load_markdown_chunks(chunks_dir: Path) -> list[LegalChunk]:
+def load_markdown_chunks(chunks_dir: str | Path) -> list[LegalChunk]:
     """Load and parse all markdown chunk files in a directory tree."""
+    chunks_dir = Path(chunks_dir)
     if not chunks_dir.exists():
         raise FileNotFoundError(f"Chunks directory does not exist: {chunks_dir}")
     if not chunks_dir.is_dir():

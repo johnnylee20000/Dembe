@@ -63,7 +63,7 @@ class TTRAGPipeline:
             "act_name": str(metadata.get("act_name", "Unknown Act")),
             "chapter": str(metadata.get("chapter", "Unknown Chapter")),
             "section": str(metadata.get("section", "Unknown Section")),
-            "url": str(metadata.get("source_url", "")),
+            "url": str(metadata.get("url", metadata.get("source_url", ""))),
         }
 
     @staticmethod
@@ -75,7 +75,7 @@ class TTRAGPipeline:
                 f"[{idx}] Act: {meta.get('act_name', 'Unknown')} | "
                 f"Chapter: {meta.get('chapter', 'N/A')} | "
                 f"Section: {meta.get('section', 'N/A')} | "
-                f"URL: {meta.get('source_url', '')}"
+                f"URL: {meta.get('url', meta.get('source_url', ''))}"
             )
             parts.append(f"{label}\n{chunk.text}")
         return "\n\n".join(parts)

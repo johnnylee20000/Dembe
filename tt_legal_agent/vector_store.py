@@ -47,8 +47,20 @@ class TTVectorStore:
         persist_directory: str = ".chroma_tt_law",
         collection_name: str = "tt_law",
         embedding_config: EmbeddingConfig | None = None,
+        embedding_backend: str | None = None,
+        local_embedding_model: str | None = None,
+        openai_embedding_model: str | None = None,
+        openai_api_key: str | None = None,
     ) -> None:
-        self.embedding_config = embedding_config or EmbeddingConfig()
+        config = embedding_config or EmbeddingConfig()
+        if embedding_backend is not None:
+            config = EmbeddingConfig(
+                backend=embedding_backend,
+                openai_model=openai_embedding_model or config.openai_model,
+                local_model=local_embedding_model or config.local_model,
+                openai_api_key=openai_api_key or config.openai_api_key,
+            )
+        self.embedding_config = config
         self.embedding_config.validate()
         self.client = chromadb.PersistentClient(path=persist_directory)
         self.collection = self.client.get_or_create_collection(name=collection_name)
