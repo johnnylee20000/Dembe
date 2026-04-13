@@ -45,6 +45,7 @@ The output includes:
 This repo now also contains:
 
 - `legal_ai_english_law_report.md`
+- `legal_ai_english_law_spec.json`
 
 It provides:
 
@@ -52,3 +53,4 @@ It provides:
 - a feature matrix showing the shared product structure
 - analysis of how each platform chunks legal information
 - a reusable chunk schema and pipeline you can apply to your own agent
+- a machine-readable JSON spec for direct code integration
