@@ -1,0 +1,13 @@
+chromadb
+openai
+sentence-transformers
+requests
+streamlit
+langchain
+langchain-core
+langchain-text-splitters
+langchain-chroma
+langchain-openai
+langchain-huggingface
+pypdf
+python-docx

@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+
+.chroma_tt_law/
+*.sqlite3
+vector_db/*
+!vector_db/.gitkeep
+
+/tmp/
+.DS_Store

@@ -1,0 +1,378 @@
+{
+  "meta": {
+    "title": "English-law legal AI feature and chunking spec",
+    "version": "1.0.0",
+    "generated_from": "legal_ai_english_law_report.md",
+    "scope": "Products with explicit UK/English-law positioning and enterprise legal workflows",
+    "default_jurisdiction": "England & Wales"
+  },
+  "top_5_platforms": [
+    {
+      "id": "lexis_plus_ai_uk",
+      "name": "Lexis+ AI",
+      "vendor": "LexisNexis UK"
+    },
+    {
+      "id": "cocounsel_legal_uk",
+      "name": "CoCounsel Legal UK / Westlaw Edge UK with CoCounsel",
+      "vendor": "Thomson Reuters"
+    },
+    {
+      "id": "vincent_ai_vlex",
+      "name": "Vincent AI",
+      "vendor": "vLex"
+    },
+    {
+      "id": "harvey",
+      "name": "Harvey",
+      "vendor": "Harvey"
+    },
+    {
+      "id": "legora",
+      "name": "Legora",
+      "vendor": "Legora"
+    }
+  ],
+  "feature_layers": [
+    {
+      "layer": "research_assistant",
+      "display_name": "Research assistant",
+      "platform_mapping": {
+        "lexis_plus_ai_uk": "Ask (conversational legal Q&A)",
+        "cocounsel_legal_uk": "Deep Research",
+        "vincent_ai_vlex": "Ask a Research Question / Compare Jurisdictions",
+        "harvey": "Assistant + Knowledge",
+        "legora": "Legal Research"
+      }
+    },
+    {
+      "layer": "drafting",
+      "display_name": "Drafting",
+      "platform_mapping": {
+        "lexis_plus_ai_uk": "Draft mode + document drafting",
+        "cocounsel_legal_uk": "Live Draft, Draft/Modify Contracts",
+        "vincent_ai_vlex": "Contract analysis/redline workflows",
+        "harvey": "Assistant + Word ecosystem",
+        "legora": "Word Add-In + Editor"
+      }
+    },
+    {
+      "layer": "document_analysis",
+      "display_name": "Document analysis",
+      "platform_mapping": {
+        "lexis_plus_ai_uk": "Upload/Analyse + Summarise",
+        "cocounsel_legal_uk": "Tabular Analysis, Summarise/Compare, Litigation Document Analyser",
+        "vincent_ai_vlex": "Analyze Contract/Pleadings/Complaint",
+        "harvey": "Vault review tables + deep analysis",
+        "legora": "Tabular Review"
+      }
+    },
+    {
+      "layer": "citation_grounding",
+      "display_name": "Citation grounding",
+      "platform_mapping": {
+        "lexis_plus_ai_uk": "Linked legal citations + Shepard's checks",
+        "cocounsel_legal_uk": "Westlaw/Practical Law grounded citations",
+        "vincent_ai_vlex": "Fully cited outputs + direct links",
+        "harvey": "Source-grounded answers via ecosystem",
+        "legora": "Trusted legal sources + verifiable output"
+      }
+    },
+    {
+      "layer": "knowledge_repository",
+      "display_name": "Knowledge repository",
+      "platform_mapping": {
+        "lexis_plus_ai_uk": "Vault (document collections)",
+        "cocounsel_legal_uk": "DMS + firm knowledge integration",
+        "vincent_ai_vlex": "Global legal database + firm workflows",
+        "harvey": "Vault + knowledge bases",
+        "legora": "Internal + trusted legal content sources"
+      }
+    },
+    {
+      "layer": "workflow_automation",
+      "display_name": "Workflow automation",
+      "platform_mapping": {
+        "lexis_plus_ai_uk": "Prompted task flows + timeline generation",
+        "cocounsel_legal_uk": "Agentic Deep Research + playbooks + chronologies",
+        "vincent_ai_vlex": "20+ workflow templates + Studio",
+        "harvey": "Workflow Agents (prebuilt/custom)",
+        "legora": "Workflows module"
+      }
+    },
+    {
+      "layer": "collaboration_governance",
+      "display_name": "Collaboration/governance",
+      "platform_mapping": {
+        "lexis_plus_ai_uk": "Enterprise controls + private model handling",
+        "cocounsel_legal_uk": "M365/DMS/HighQ integration + governance",
+        "vincent_ai_vlex": "Enterprise security controls",
+        "harvey": "Permissions/governance + sharing",
+        "legora": "Collaboration workspace + certifications"
+      }
+    }
+  ],
+  "chunking_patterns": {
+    "shared": [
+      {
+        "pattern_id": "task_first_chunks",
+        "name": "Task-first chunks",
+        "description": "Information is organized by legal task: research, draft, review, summarize, compare, chronology."
+      },
+      {
+        "pattern_id": "authority_linked_chunks",
+        "name": "Authority-linked chunks",
+        "description": "Outputs are chunked with legal authority anchors (cases/statutes/guidance links), not free text only."
+      },
+      {
+        "pattern_id": "repository_query_chunks",
+        "name": "Repository + query chunks",
+        "description": "Products support chunking across user-uploaded or connected repositories (DMS/Vault/content sets)."
+      },
+      {
+        "pattern_id": "table_style_extraction_chunks",
+        "name": "Table-style extraction chunks",
+        "description": "Large-document review is chunked into structured rows/columns (issues, clauses, risks, citations)."
+      },
+      {
+        "pattern_id": "workflow_step_chunks",
+        "name": "Workflow-step chunks",
+        "description": "Agentic/multi-step workflows produce chunked stages: plan -> gather sources -> synthesize -> draft."
+      }
+    ],
+    "vendor_differences": {
+      "lexis_plus_ai_uk": "Strong split between Ask / Draft / Summarise / Upload chunks and legal-vs-general AI mode.",
+      "cocounsel_legal_uk": "Strong explicit chunking by research/drafting/analysis plus Deep Research plans and tabular analysis.",
+      "vincent_ai_vlex": "Workflow-library chunking by domain (research, litigation, transactions, intelligence) with citation-backed outputs.",
+      "harvey": "Platform-module chunking (Assistant, Vault, Knowledge, Workflow Agents) with high-capacity Vault tables.",
+      "legora": "Collaborative workspace chunking with clear Review/Draft/Research lanes and spreadsheet-style review chunks."
+    }
+  },
+  "recommended_agent_structure": {
+    "product_surface_modules": [
+      "Research",
+      "Draft",
+      "Review & Compare",
+      "Chronology/Timeline",
+      "Knowledge Base (firm + external)",
+      "Workflow Agents",
+      "Governance & Audit"
+    ],
+    "canonical_chunk_schema": {
+      "field_definitions": [
+        {
+          "name": "chunk_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "matter_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "jurisdiction",
+          "type": "string",
+          "required": true,
+          "default": "England & Wales"
+        },
+        {
+          "name": "workflow_stage",
+          "type": "string",
+          "required": true,
+          "enum": [
+            "research",
+            "draft",
+            "review",
+            "timeline",
+            "strategy"
+          ]
+        },
+        {
+          "name": "chunk_type",
+          "type": "string",
+          "required": true,
+          "enum": [
+            "authority",
+            "fact",
+            "issue",
+            "risk",
+            "clause",
+            "timeline_event",
+            "playbook_rule",
+            "output"
+          ]
+        },
+        {
+          "name": "source_type",
+          "type": "string",
+          "required": true,
+          "enum": [
+            "case_law",
+            "legislation",
+            "guidance",
+            "firm_doc",
+            "user_note"
+          ]
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "citations",
+          "type": "array",
+          "required": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "confidence",
+          "type": "number",
+          "required": true,
+          "minimum": 0,
+          "maximum": 1
+        },
+        {
+          "name": "created_at",
+          "type": "string",
+          "required": true,
+          "format": "date-time"
+        }
+      ]
+    },
+    "chunk_pipeline": [
+      {
+        "step": 1,
+        "name": "ingest",
+        "description": "Ingest documents and authoritative legal content."
+      },
+      {
+        "step": 2,
+        "name": "segment",
+        "description": "Segment by legal boundaries (headings, clauses, facts, issues, procedural events)."
+      },
+      {
+        "step": 3,
+        "name": "label",
+        "description": "Label each segment with chunk_type and workflow_stage."
+      },
+      {
+        "step": 4,
+        "name": "link_authority",
+        "description": "Link authority to every substantive chunk (citation-first policy)."
+      },
+      {
+        "step": 5,
+        "name": "aggregate_tables",
+        "description": "Aggregate to tables for due diligence/disclosure style review."
+      },
+      {
+        "step": 6,
+        "name": "generate_outputs",
+        "description": "Generate memo, clause draft, risk report, and chronology from chunk bundles."
+      },
+      {
+        "step": 7,
+        "name": "audit_trail",
+        "description": "Preserve source links and transformation history."
+      }
+    ],
+    "chunk_templates": [
+      {
+        "template_id": "research_answer",
+        "name": "Research answer chunk",
+        "input_bundle": [
+          "issue",
+          "authority"
+        ],
+        "output": [
+          "concise_answer",
+          "citations",
+          "counterpoint"
+        ]
+      },
+      {
+        "template_id": "contract_review",
+        "name": "Contract review chunk",
+        "input_bundle": [
+          "clause",
+          "playbook_rule"
+        ],
+        "output": [
+          "risk_table_rows",
+          "severity",
+          "deviation",
+          "suggested_fallback_language"
+        ]
+      },
+      {
+        "template_id": "litigation_prep",
+        "name": "Litigation prep chunk",
+        "input_bundle": [
+          "pleading",
+          "timeline_event"
+        ],
+        "output": [
+          "argument_map",
+          "evidence_gaps",
+          "priority_actions"
+        ]
+      },
+      {
+        "template_id": "drafting",
+        "name": "Drafting chunk",
+        "input_bundle": [
+          "precedent_clause",
+          "style_guide"
+        ],
+        "output": [
+          "draft_clause",
+          "rationale",
+          "authority_footnotes"
+        ]
+      }
+    ]
+  },
+  "sources": [
+    {
+      "platform_id": "lexis_plus_ai_uk",
+      "urls": [
+        "https://www.lexisnexis.co.uk/products/lexis-plus-ai"
+      ]
+    },
+    {
+      "platform_id": "cocounsel_legal_uk",
+      "urls": [
+        "https://legalsolutions.thomsonreuters.co.uk/en/products-services/cocounsel-legal-uk.html",
+        "https://legalsolutions.thomsonreuters.co.uk/en/products-services/cocounsel-legal-uk/features.html",
+        "https://legalsolutions.thomsonreuters.co.uk/en/products-services/westlaw-edge-uk.html"
+      ]
+    },
+    {
+      "platform_id": "vincent_ai_vlex",
+      "urls": [
+        "https://vlex.com/coverage/united-kingdom",
+        "https://vlex.com/vincent-ai"
+      ]
+    },
+    {
+      "platform_id": "harvey",
+      "urls": [
+        "https://www.harvey.ai/legal",
+        "https://www.harvey.ai/platform/vault",
+        "https://www.harvey.ai/platform/workflow-agents"
+      ]
+    },
+    {
+      "platform_id": "legora",
+      "urls": [
+        "https://legora.com/",
+        "https://legora.com/product/tabular-review",
+        "https://legora.com/product/legal-research"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "user_info": {
+    "OS Version": "linux 6.1.147",
+    "Shell": "bash",
+    "Workspace Path": "/workspace",
+    "Is directory a git repo": true,
+    "Git repo": "/workspace",
+    "Today's date": "Monday Apr 13, 2026",
+    "Terminals folder": "/home/ubuntu/.cursor/projects/workspace/terminals"
+  },
+  "user_query": "buld the ai agent using these information"
+}

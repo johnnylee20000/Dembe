@@ -1,0 +1,30 @@
+{
+  "question": "If a suspect makes an utterance during an interview in Santa Cruz, what is the required police procedure before continuing?",
+  "answer": "OPENAI_API_KEY is not configured, so this is a retrieval-only legal summary.\nDirect answer:\nBefore continuing substantive questioning, transition to a Statement under Caution process, record/read back the statement, and complete required authentication (including Justice of the Peace authentication where required).\n\nLegal basis:\n- [1] # TTPS Standing Orders - Interview Procedure Act: TTPS Standing Orders Chapter: Police Procedure Section: Interview and Utterance Handling URL: https://example.tt/ttps-standing-orders/interview-procedure When a suspect makes an utterance du (Act: TTPS Standing Orders; Chapter: Police Procedure; Section: Interview and Utterance Handling)\n- [2] # TTPS Standing Orders - Recording and Authentication of Statements Act: TTPS Standing Orders Chapter: Operational Orders Section: Interview Procedure 5.3 URL: https://example.org/ttps-standing-orders/interview-procedure When a person under (Act: TTPS Standing Orders; Chapter: Operational Orders; Section: Interview Procedure 5.3)\n- [3] # Firearms Act - Handling Utterances During Interview Act: Firearms Act Chapter: 16:01 Section: 4 URL: https://www.legalaffairs.gov.tt/ When a suspect makes an utterance during an interview, officers must avoid obtaining informal admissions (Act: Firearms Act; Chapter: 16:01; Section: 4)",
+  "citations": [
+    {
+      "act_name": "TTPS Standing Orders",
+      "chapter": "Police Procedure",
+      "section": "Interview and Utterance Handling",
+      "url": "https://example.tt/ttps-standing-orders/interview-procedure"
+    },
+    {
+      "act_name": "TTPS Standing Orders",
+      "chapter": "Operational Orders",
+      "section": "Interview Procedure 5.3",
+      "url": "https://example.org/ttps-standing-orders/interview-procedure"
+    },
+    {
+      "act_name": "Firearms Act",
+      "chapter": "16:01",
+      "section": "4",
+      "url": "https://www.legalaffairs.gov.tt/"
+    }
+  ],
+  "checks": {
+    "mentions_statement_under_caution": true,
+    "mentions_justice_of_the_peace": true,
+    "mentions_authentication": true
+  },
+  "pass": true
+}
