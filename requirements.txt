@@ -9,3 +9,4 @@ langchain-community
 langchain-openai
 chromadb
 sentence-transformers
+langchain-huggingface

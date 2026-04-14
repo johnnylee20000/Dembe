@@ -1,6 +1,6 @@
 # Trinidad & Tobago Laws Scraping + Legal Chunking
 
-This repository provides seven Python utilities:
+This repository provides nine Python utilities:
 
 1. `laws_scraper.py`
    - Scrapes the Digital Legislative Library revised Acts pages.
@@ -41,6 +41,20 @@ This repository provides seven Python utilities:
    - Includes:
      - `prosecution_audit` mode (elements-of-offence and mens rea gap analysis)
      - `defense_anticipation` mode (loophole detection + prosecution rebuttals)
+
+8. `bootstrap_prosecution_corpus.py`
+   - End-to-end corpus bootstrap for prosecution workflows:
+     - scrape laws
+     - prioritize prosecution/procedure-relevant Acts
+     - chunk selected PDFs
+     - rebuild vector DB
+
+9. `validate_prosecution_stack.py`
+   - Automated validation suite for prosecution stack:
+     - legal advisor retrieval checks
+     - prosecution/defense audit checks
+     - cleanliness scan for banned case-specific terms
+     - optional strict mode for authority-keyword expectations
 
 ## Install
 
@@ -110,6 +124,16 @@ python3 build_vector_db.py \
   --vector-db-path /workspace/vector_db
 ```
 
+## One-Command Prosecution Corpus Bootstrap
+
+```bash
+python3 bootstrap_prosecution_corpus.py \
+  --output-root /workspace/data/prosecution_bootstrap \
+  --scrape-limit 120 \
+  --min-priority-docs 12 \
+  --vector-db-path /workspace/vector_db
+```
+
 ## Complaint Drafter Usage
 
 ```bash
@@ -157,6 +181,14 @@ python3 prosecution_audit.py \
 
 If no LLM runtime is available, add `--retrieval-only` to run deterministic
 audit scaffolding and source-grounded risk checks.
+
+## Prosecution Stack Validation
+
+```bash
+python3 validate_prosecution_stack.py \
+  --vector-db-path /workspace/vector_db \
+  --strict-authority
+```
 
 ## Legal Validity Notice
 

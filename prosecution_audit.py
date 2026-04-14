@@ -26,6 +26,7 @@ from assistant_core import (
     format_source_documents,
     retrieve_documents,
 )
+from legal_frameworks import OFFENCE_FRAMEWORKS, PROCEDURAL_RISK_GUIDES
 
 
 PROSECUTION_AUDIT_PROMPT = PromptTemplate(
@@ -128,48 +129,117 @@ def _extract_context(source_docs, char_limit: int = 26000) -> str:
     return "\n\n".join(doc.page_content for doc in source_docs)[:char_limit]
 
 
-def _fallback_prosecution_audit(statement: str, context: str) -> str:
+def _best_framework(statement: str):
     statement_lower = statement.lower()
-    has_possession = any(word in statement_lower for word in ["possession", "found with", "had in his possession"])
-    has_knowledge = any(word in statement_lower for word in ["knew", "knowingly", "admitted", "aware"])
-    has_control = any(word in statement_lower for word in ["on his person", "waistband", "in his hand", "within reach"])
+    ranked = []
+    for framework in OFFENCE_FRAMEWORKS:
+        score = sum(1 for kw in framework.trigger_keywords if kw in statement_lower)
+        ranked.append((score, framework))
+    ranked.sort(key=lambda x: x[0], reverse=True)
+    return ranked[0][1] if ranked and ranked[0][0] > 0 else None
 
-    mens_rea = "WEAK/MISSING" if not has_knowledge else "PRESENT"
-    control = "PRESENT" if has_control else "MISSING"
-    possession_assessment = "WEAK" if has_possession and not has_control else ("MISSING" if not has_possession else "STRONG")
+
+def _element_assessment(statement: str, keywords: tuple[str, ...] | list[str]) -> tuple[str, str]:
+    statement_lower = statement.lower()
+    hits = [kw for kw in keywords if kw in statement_lower]
+    if len(hits) >= 2:
+        return "STRONG", "; ".join(hits[:3])
+    if len(hits) == 1:
+        return "WEAK", hits[0]
+    return "MISSING", "MISSING"
+
+
+def _fallback_prosecution_audit(statement: str, context: str) -> str:
+    framework = _best_framework(statement)
+    if framework is None:
+        return dedent(
+            f"""
+            Charge Identification:
+            - Act and Section: REVIEW REQUIRED
+            - Offence Label: REVIEW REQUIRED
+
+            Essential Elements (Points to Prove):
+            1. Conduct element
+               - Evidence Found in Statement: MISSING
+               - Assessment: MISSING
+            2. Mental element (mens rea)
+               - Evidence Found in Statement: MISSING
+               - Assessment: MISSING
+            3. Legality/compliance element
+               - Evidence Found in Statement: MISSING
+               - Assessment: MISSING
+
+            Mens Rea / Knowledge Analysis:
+            - Finding: WEAK/MISSING.
+
+            Standard of Proof Guidance:
+            - Reasonable Suspicion Issues: Record objective grounds at intervention stage.
+            - Prima Facie Charge Sufficiency: Insufficiently articulated from provided statement.
+
+            High-Risk Gaps:
+            - Offence type not clearly identifiable from statement.
+            - Essential elements are not explicitly pleaded in factual narrative.
+
+            Recommended Additions for Officer Statement:
+            - Identify exact offence and statutory authority.
+            - Set out chronology, observations, suspect conduct, and evidential linkage.
+            - Include caution timing and exhibit handling continuity.
+
+            Note: Retrieval-only fallback mode used (no LLM runtime available).
+            Context excerpt:
+            {context[:1200]}
+            """
+        ).strip()
+
+    element_lines: list[str] = []
+    weak_or_missing: list[tuple[str, str]] = []
+    mens_rea_flag = "MISSING"
+    for idx, element in enumerate(framework.elements, start=1):
+        assessment, evidence = _element_assessment(statement, tuple(element.evidence_keywords))
+        if "knowledge" in element.name.lower() or "mens rea" in element.name.lower():
+            mens_rea_flag = assessment
+        if assessment in {"WEAK", "MISSING"}:
+            weak_or_missing.append((element.name, assessment))
+        element_lines.append(
+            dedent(
+                f"""
+                {idx}. {element.name}
+                   - Evidence Found in Statement: {evidence}
+                   - Assessment: {assessment}
+                """
+            ).strip()
+        )
+
+    high_risk = "\n".join(
+        f"- {name} is {'missing' if assessment == 'MISSING' else 'weakly supported'}"
+        for name, assessment in weak_or_missing
+    )
+    if not high_risk:
+        high_risk = "- No critical missing elements detected on deterministic check."
 
     return dedent(
         f"""
         Charge Identification:
-        - Act and Section: REVIEW REQUIRED
-        - Offence Label: REVIEW REQUIRED
+        - Act and Section: {framework.act_name} Chap. {framework.chapter}, likely sections {", ".join(framework.likely_sections)}
+        - Offence Label: {framework.offence_label}
 
         Essential Elements (Points to Prove):
-        1. Possession/Custody
-           - Evidence Found in Statement: {"present" if has_possession else "MISSING"}
-           - Assessment: {possession_assessment}
-        2. Control over item
-           - Evidence Found in Statement: {"present" if has_control else "MISSING"}
-           - Assessment: {control}
-        3. Knowledge / Mens Rea
-           - Evidence Found in Statement: {"present" if has_knowledge else "MISSING"}
-           - Assessment: {"STRONG" if has_knowledge else "MISSING"}
+        {chr(10).join(element_lines)}
 
         Mens Rea / Knowledge Analysis:
-        - Finding: {mens_rea}. Add facts proving awareness of nature/character of item.
+        - Finding: {mens_rea_flag}. Mens rea must be explicitly inferable from conduct/admissions/circumstances.
 
         Standard of Proof Guidance:
-        - Reasonable Suspicion Issues: REVIEW REQUIRED from full legal context.
-        - Prima Facie Charge Sufficiency: potentially vulnerable where knowledge/control facts are thin.
+        - Reasonable Suspicion Issues: Must be supported by contemporaneous objective observations.
+        - Prima Facie Charge Sufficiency: {'Potentially vulnerable' if weak_or_missing else 'No immediate deterministic deficiency flagged'}.
 
         High-Risk Gaps:
-        - Missing explicit facts proving knowledge.
-        - Missing explicit chain of custody / control details.
+        {high_risk}
 
         Recommended Additions for Officer Statement:
-        - State exact location of item relative to accused and visibility/access.
-        - Record any admissions, conduct, or circumstances indicating knowledge.
-        - Record seizure continuity and witness/officer observations chronologically.
+        - Link each statutory element to one factual paragraph.
+        - Include direct observations, suspect conduct, and post-seizure continuity.
+        - Specify absence of lawful authority/licence where relevant.
 
         Note: Retrieval-only fallback mode used (no LLM runtime available).
         Context excerpt:
@@ -197,6 +267,10 @@ def _fallback_defense_anticipation(statement: str, context: str) -> str:
     )
     risk = "HIGH" if mentions_utterance and not mentions_caution else ("MEDIUM" if mentions_search else "LOW")
 
+    procedural_guide = "\n".join(
+        f"- {k}: {', '.join(v)}" for k, v in PROCEDURAL_RISK_GUIDES.items()
+    )
+
     return dedent(
         f"""
         Defense Loophole Analysis:
@@ -221,6 +295,9 @@ def _fallback_defense_anticipation(statement: str, context: str) -> str:
         Admissibility Verdict:
         - Overall Admissibility Risk: {risk}
         - Immediate Corrective Actions: add caution timing, grounds for search/arrest, and full chronology.
+
+        Procedural Integrity Reference Checklist:
+        {procedural_guide}
 
         Note: Retrieval-only fallback mode used (no LLM runtime available).
         Context excerpt:
