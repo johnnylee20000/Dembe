@@ -1,6 +1,6 @@
 # Trinidad & Tobago Laws Scraping + Legal Chunking
 
-This repository provides two Python utilities:
+This repository provides five Python utilities:
 
 1. `laws_scraper.py`
    - Scrapes the Digital Legislative Library revised Acts pages.
@@ -15,6 +15,22 @@ This repository provides two Python utilities:
    - Keeps sections atomic when section token estimate is <= 1000.
    - Uses recursive character splitting for oversized sections.
    - Adds chunk headers in the format: `[Act Name] - Section [Number]`.
+
+3. `retrieval_qa.py`
+   - Builds a LangChain `RetrievalQA` ("stuff") chain over local Chroma.
+   - Loads vector DB from `/vector_db` (with local fallback path checks).
+   - Returns source documents for answer traceability.
+
+4. `complaint_drafter.py`
+   - Exposes specialized `draft_complaint` generation.
+   - Uses one-shot Badal-style drafting prompt.
+   - Retrieves legal context (ICCS / Act / Section) from vector store before drafting.
+
+5. `app.py`
+   - Streamlit interface with:
+     - Tab 1: Legal Advisor
+     - Tab 2: File Drafter
+     - Tab 3: ICCS Lookup
 
 ## Install
 
@@ -61,6 +77,45 @@ Output format is JSONL with one chunk per line, including:
 - `header`
 - `text`
 - `full_text`
+
+## RetrievalQA Usage
+
+```bash
+python3 retrieval_qa.py \
+  --vector-db-path /vector_db \
+  --question "What are my powers under the Dangerous Drugs Act?" \
+  --model-name gpt-4o
+```
+
+Notes:
+- Uses `chain_type="stuff"`.
+- Returns source documents in JSON output.
+- If `OPENAI_API_KEY` is absent, falls back to local Ollama model config.
+
+## Complaint Drafter Usage
+
+```bash
+python3 complaint_drafter.py \
+  --vector-db-path /vector_db \
+  --officer-notes "Stopped man in Santa Cruz with a rifle and no licence."
+```
+
+Output includes:
+- ICCS Code line
+- Act/Section line
+- Statement of Offence
+- Particulars of Offence
+- source-document metadata/snippets
+
+## Streamlit App
+
+```bash
+streamlit run app.py
+```
+
+Expected environment:
+- `VECTOR_DB_PATH` (default `/vector_db`)
+- `OPENAI_API_KEY` for GPT-4o **or** local Ollama configured via `OLLAMA_MODEL`
 
 ## Legal Validity Notice
 
