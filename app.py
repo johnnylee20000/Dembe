@@ -15,7 +15,11 @@ from typing import Any
 
 import streamlit as st
 
-from assistant_core import build_retrieval_qa_chain, format_source_documents
+from assistant_core import (
+    build_retrieval_qa_chain,
+    format_source_documents,
+    retrieval_only_search,
+)
 from complaint_drafter import draft_complaint
 
 
@@ -66,7 +70,21 @@ def render_legal_advisor_tab():
                     st.json(src["metadata"])
                     st.write(src["snippet"])
             except Exception as exc:
-                st.error(f"Legal advisor failed: {exc}")
+                st.warning(
+                    "LLM response unavailable; showing retrieved legal context only. "
+                    f"Reason: {exc}"
+                )
+                sources = retrieval_only_search(
+                    query=query.strip(),
+                    vector_db_path=os.getenv("VECTOR_DB_PATH", "/vector_db"),
+                    embedding_provider=os.getenv("EMBEDDING_PROVIDER", None),
+                    k=int(os.getenv("RAG_K", "6")),
+                )
+                st.markdown("### Retrieved Sources (No Generated Answer)")
+                for idx, src in enumerate(sources, start=1):
+                    st.markdown(f"**Source {idx}**")
+                    st.json(src["metadata"])
+                    st.write(src["snippet"])
 
 
 def render_file_drafter_tab():
@@ -131,7 +149,21 @@ def render_iccs_lookup_tab():
                     st.json(src["metadata"])
                     st.write(src["snippet"])
             except Exception as exc:
-                st.error(f"Lookup failed: {exc}")
+                st.warning(
+                    "LLM response unavailable; showing retrieved legal context only. "
+                    f"Reason: {exc}"
+                )
+                sources = retrieval_only_search(
+                    query=query.strip(),
+                    vector_db_path=os.getenv("VECTOR_DB_PATH", "/vector_db"),
+                    embedding_provider=os.getenv("EMBEDDING_PROVIDER", None),
+                    k=int(os.getenv("RAG_K", "6")),
+                )
+                st.markdown("### Retrieved Sources (No Generated Answer)")
+                for idx, src in enumerate(sources, start=1):
+                    st.markdown(f"**Source {idx}**")
+                    st.json(src["metadata"])
+                    st.write(src["snippet"])
 
 
 def main() -> None:

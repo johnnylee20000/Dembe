@@ -32,6 +32,10 @@ This repository provides five Python utilities:
      - Tab 2: File Drafter
      - Tab 3: ICCS Lookup
 
+6. `build_vector_db.py`
+   - Builds a persisted local Chroma DB from chunk JSONL files.
+   - Defaults to indexing `data/*chunks*.jsonl` into `/workspace/vector_db`.
+
 ## Install
 
 ```bash
@@ -91,6 +95,14 @@ Notes:
 - Uses `chain_type="stuff"`.
 - Returns source documents in JSON output.
 - If `OPENAI_API_KEY` is absent, falls back to local Ollama model config.
+
+## Build Vector DB (if not already present)
+
+```bash
+python3 build_vector_db.py \
+  --chunks-glob "data/*chunks*.jsonl" \
+  --vector-db-path /workspace/vector_db
+```
 
 ## Complaint Drafter Usage
 
