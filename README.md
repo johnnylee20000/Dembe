@@ -1,58 +1,56 @@
 # Dembe
 
-Trinidad and Tobago legal AI assistant scaffold with RAG, vector search, agentic tools, and validation workflow.
+Trinidad and Tobago legal AI assistant scaffold with RAG, local vector search, and officer-focused UI.
+
+## Required file structure
+
+This project now follows the exact structure requested:
+
+- `/data` - raw scraped files
+- `/chunks` - processed, chunked files ready for indexing
+- `/vector_db` - local Chroma vector database (created by `ingest.py`)
+- `ingest.py` - LangChain ingestion script (`/chunks` -> `/vector_db`)
+- `agent.py` - retriever + answer layer for officer questions
+- `.cursorrules` - project behavior constraints for TTPS assistant behavior
+- `app_streamlit.py` - police officer chat interface
 
 ## Core deliverables in this repo
 
-- `tt_legal_agent/`: reusable package for chunk loading, embeddings + ChromaDB storage, retrieval, and answer synthesis.
-- `scripts/index_chunks.py`: embed and upsert markdown chunks into ChromaDB.
-- `scripts/ask_agent.py`: ask legal questions over indexed chunks.
-- `scripts/run_badal_test.py`: benchmark script for the "Badal test" style check.
-- `app_streamlit.py`: Streamlit chat UI for quick deployment.
-- `data/chunks/*.md`: sample T&T law/procedure chunks with citation metadata.
+- `ingest.py`: LangChain ingestion script for `/chunks` to local Chroma `/vector_db`.
+- `agent.py`: retriever-based assistant that queries `/vector_db` before answering.
+- `app_streamlit.py`: officer UI with loaded-laws sidebar, chat window, and source citation box.
+- `.cursorrules`: TTPS-specific behavior instructions.
+- `chunks/*.md`: sample chunk data seeded from existing T&T examples.
+- `vector_db/`: created by ingest script.
+- `tt_legal_agent/`: reusable package from earlier iterations.
 - `requirements.txt`: Python dependencies.
 
 ## Architecture implemented
 
-1. **Generate embeddings and upsert to vector DB**
-   - Supports embedding backends:
+1. **Generate embeddings and upsert to local vector DB**
+   - `ingest.py` initializes local ChromaDB in `/vector_db`
+   - Supports embeddings:
      - OpenAI (`text-embedding-3-small`)
-     - Local SentenceTransformers (`sentence-transformers/all-MiniLM-L6-v2`)
-   - Stores vectors in **ChromaDB**.
+     - HuggingFace local (`sentence-transformers/all-MiniLM-L6-v2`)
    - Stores metadata with each chunk:
-     - `act_name`
-     - `chapter`
-     - `section`
-     - `url`
-     - `source_file`
+     - `act_name`, `chapter`, `section`, `url`, `source_file`
 
-2. **RAG pipeline**
-   - Semantic retrieval from ChromaDB.
-   - Context injection into strict legal system prompt.
-   - Synthesis with LLM (when `OPENAI_API_KEY` is configured).
-   - Safe fallback mode if key is absent (returns retrieved context and citations).
+2. **Retriever-connected agent**
+   - `agent.py` loads `/vector_db`
+   - converts officer question to vector
+   - retrieves top matches (default top 3)
+   - answers with citation-grounded legal text
 
-3. **Strict system prompt**
-   - Located in `tt_legal_agent/system_prompt.py`.
-   - Enforces:
-     - context-only answers
-     - explicit unknown response when missing
-     - mandatory citations
-     - professional legal tone
+3. **Cursor behavior rules**
+   - `.cursorrules` enforces:
+     - query `/vector_db` before answering
+     - prioritize relevant Laws of Trinidad and Tobago sections
+     - use State v. Allister Badal complaint formatting standard
 
-4. **Agentic tools**
-   - Gazette web search: `web_search_gazette(...)`
-   - Document summarizer: `summarize_document(...)` for `.txt`, `.md`, `.pdf`, and `.docx`
-
-5. **Validation ("Badal test")**
-   - Script checks for key procedural concepts in answer:
-     - statement under caution
-     - justice of the peace
-     - authentication
-
-6. **Deployment surface**
-   - Streamlit UI included.
-   - Suitable for deployment on Render or similar Python app hosts.
+4. **Police officer UI**
+   - sidebar shows loaded Laws/Acts currently in DB
+   - main chat window for officer Q&A
+   - source citation box under each answer
 
 ## Setup
 
@@ -62,46 +60,37 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Index legal markdown chunks
+## Ingest chunks into `/vector_db`
 
-Local embeddings:
+HuggingFace/local embeddings:
 
 ```bash
-python3 scripts/index_chunks.py \
-  --chunks-dir data/chunks \
-  --persist-dir .chroma_tt_law \
-  --collection tt_law \
-  --embedding-backend local
+python3 ingest.py \
+  --chunks-dir chunks \
+  --vector-db-dir vector_db \
+  --collection-name tt_law_chunks \
+  --embedding-provider huggingface
 ```
 
 OpenAI embeddings:
 
 ```bash
 export OPENAI_API_KEY="YOUR_KEY"
-python3 scripts/index_chunks.py \
-  --chunks-dir data/chunks \
-  --persist-dir .chroma_tt_law \
-  --collection tt_law \
-  --embedding-backend openai
+python3 ingest.py \
+  --chunks-dir chunks \
+  --vector-db-dir vector_db \
+  --collection-name tt_law_chunks \
+  --embedding-provider openai
 ```
 
-## Ask a question (CLI)
+## Ask a question (CLI agent)
 
 ```bash
-python3 scripts/ask_agent.py \
-  --persist-dir .chroma_tt_law \
-  --collection tt_law \
-  --embedding-backend local \
-  --question "If a suspect makes an utterance during interview, what should happen before continuing?"
-```
-
-## Run Badal benchmark
-
-```bash
-python3 scripts/run_badal_test.py \
-  --chroma-dir .chroma_tt_law \
-  --collection tt_law \
-  --embedding-backend local
+python3 agent.py \
+  --question "What is the ICCS code for 7.62 ammo?" \
+  --vector-db-dir vector_db \
+  --collection-name tt_law_chunks \
+  --k 3
 ```
 
 ## Run Streamlit app
@@ -112,9 +101,8 @@ streamlit run app_streamlit.py
 
 ## Environment variables
 
-- `OPENAI_API_KEY`: required for OpenAI embeddings and full LLM synthesis.
-- Without this key, retrieval still works and the assistant returns a grounded
-  context-based fallback response with citations.
+- `OPENAI_API_KEY`: required for OpenAI embeddings and full LLM synthesis in `agent.py`.
+- Without this key, retrieval still works and returns a citation-grounded retrieval summary.
 
 ## Optional artifacts from prior work
 
