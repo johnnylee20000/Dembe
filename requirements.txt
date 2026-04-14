@@ -1,0 +1,12 @@
+requests
+beautifulsoup4
+pdfplumber
+PyMuPDF
+crawl4ai
+streamlit
+langchain
+langchain-community
+langchain-openai
+chromadb
+sentence-transformers
+langchain-huggingface
