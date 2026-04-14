@@ -89,10 +89,10 @@ def render_legal_advisor_tab():
 
 def render_file_drafter_tab():
     st.subheader("File Drafter")
-    st.caption("Generate Complaint on Oath style Statement + Particulars from incident notes.")
+    st.caption("Generate a structurally standard TT Complaint on Oath from incident notes.")
     officer_notes = st.text_area(
         "Incident details",
-        placeholder="Stopped man in Santa Cruz with a rifle in waistband, no licence produced.",
+        placeholder="Observed suspect in possession of a firearm without visible lawful authority.",
         height=180,
         key="drafter_notes",
     )

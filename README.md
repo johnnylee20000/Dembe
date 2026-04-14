@@ -23,7 +23,7 @@ This repository provides five Python utilities:
 
 4. `complaint_drafter.py`
    - Exposes specialized `draft_complaint` generation.
-   - Uses one-shot Badal-style drafting prompt.
+   - Uses a generalized Trinidad and Tobago complaint structure.
    - Retrieves legal context (ICCS / Act / Section) from vector store before drafting.
 
 5. `app.py`
@@ -109,7 +109,7 @@ python3 build_vector_db.py \
 ```bash
 python3 complaint_drafter.py \
   --vector-db-path /vector_db \
-  --officer-notes "Stopped man in Santa Cruz with a rifle and no licence."
+  --officer-notes "Accused found with a firearm and no licence."
 ```
 
 Output includes:
