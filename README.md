@@ -1,6 +1,6 @@
 # Trinidad & Tobago Laws Scraping + Legal Chunking
 
-This repository provides five Python utilities:
+This repository provides seven Python utilities:
 
 1. `laws_scraper.py`
    - Scrapes the Digital Legislative Library revised Acts pages.
@@ -35,6 +35,12 @@ This repository provides five Python utilities:
 6. `build_vector_db.py`
    - Builds a persisted local Chroma DB from chunk JSONL files.
    - Defaults to indexing `data/*chunks*.jsonl` into `/workspace/vector_db`.
+
+7. `prosecution_audit.py`
+   - Runs admissibility-focused legal auditing against officer statements.
+   - Includes:
+     - `prosecution_audit` mode (elements-of-offence and mens rea gap analysis)
+     - `defense_anticipation` mode (loophole detection + prosecution rebuttals)
 
 ## Install
 
@@ -128,6 +134,29 @@ streamlit run app.py
 Expected environment:
 - `VECTOR_DB_PATH` (default `/vector_db`)
 - `OPENAI_API_KEY` for GPT-4o **or** local Ollama configured via `OLLAMA_MODEL`
+
+## Prosecution Audit Usage
+
+Prosecution-element audit:
+
+```bash
+python3 prosecution_audit.py \
+  --mode prosecution_audit \
+  --officer-statement "Officer observed accused discard package before arrest..." \
+  --vector-db-path /vector_db
+```
+
+Defense-loophole and rebuttal audit:
+
+```bash
+python3 prosecution_audit.py \
+  --mode defense_anticipation \
+  --officer-statement "Search was conducted after stop; suspect made statement in vehicle..." \
+  --vector-db-path /vector_db
+```
+
+If no LLM runtime is available, add `--retrieval-only` to run deterministic
+audit scaffolding and source-grounded risk checks.
 
 ## Legal Validity Notice
 

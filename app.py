@@ -21,6 +21,7 @@ from assistant_core import (
     retrieval_only_search,
 )
 from complaint_drafter import draft_complaint
+from prosecution_audit import run_defense_anticipation, run_prosecution_audit
 
 
 def _safe_chain_invoke(chain, query: str) -> dict[str, Any]:
@@ -166,18 +167,129 @@ def render_iccs_lookup_tab():
                     st.write(src["snippet"])
 
 
+def render_prosecution_audit_tab():
+    st.subheader("Prosecution Audit")
+    st.caption(
+        "Audit officer statements for essential elements, mens rea sufficiency, "
+        "and admissibility-focused weaknesses."
+    )
+    statement = st.text_area(
+        "Officer statement / notes for audit",
+        placeholder=(
+            "Describe facts, sequence, seizure details, suspect conduct, and any caution/interview steps."
+        ),
+        height=220,
+        key="audit_statement",
+    )
+    if st.button("Run Prosecution Audit", key="audit_btn"):
+        if not statement.strip():
+            st.warning("Enter statement details first.")
+            return
+        with st.spinner("Running prosecution audit..."):
+            try:
+                payload = run_prosecution_audit(
+                    officer_statement=statement.strip(),
+                    vector_db_path=os.getenv("VECTOR_DB_PATH", "/vector_db"),
+                    llm_provider=os.getenv("LLM_PROVIDER", None),
+                    model_name=os.getenv("OPENAI_MODEL", None) or os.getenv("OLLAMA_MODEL", None),
+                    embedding_provider=os.getenv("EMBEDDING_PROVIDER", None),
+                    k=int(os.getenv("AUDIT_K", "10")),
+                )
+            except Exception as exc:
+                st.warning(
+                    "LLM or advanced analysis unavailable; running retrieval-only prosecution audit. "
+                    f"Reason: {exc}"
+                )
+                payload = run_prosecution_audit(
+                    officer_statement=statement.strip(),
+                    vector_db_path=os.getenv("VECTOR_DB_PATH", "/vector_db"),
+                    embedding_provider=os.getenv("EMBEDDING_PROVIDER", None),
+                    k=int(os.getenv("AUDIT_K", "10")),
+                    retrieval_only=True,
+                )
+
+            st.markdown("### Audit Findings")
+            st.code(payload["analysis"], language="markdown")
+            st.markdown("### Source Documents")
+            for idx, src in enumerate(payload["sources"], start=1):
+                st.markdown(f"**Source {idx}**")
+                st.json(src["metadata"])
+                st.write(src["snippet"])
+
+
+def render_defense_strategy_tab():
+    st.subheader("Defense Anticipation")
+    st.caption(
+        "Identify defense loopholes for search/arrest/interview steps and generate prosecution rebuttals."
+    )
+    statement = st.text_area(
+        "Procedure notes for loophole detection",
+        placeholder=(
+            "Include search grounds, warrant status, caution timing, utterances, arrest chronology."
+        ),
+        height=220,
+        key="defense_statement",
+    )
+    if st.button("Run Defense Anticipation", key="defense_btn"):
+        if not statement.strip():
+            st.warning("Enter procedure notes first.")
+            return
+        with st.spinner("Running loophole detection and rebuttal strategy..."):
+            try:
+                payload = run_defense_anticipation(
+                    officer_statement=statement.strip(),
+                    vector_db_path=os.getenv("VECTOR_DB_PATH", "/vector_db"),
+                    llm_provider=os.getenv("LLM_PROVIDER", None),
+                    model_name=os.getenv("OPENAI_MODEL", None) or os.getenv("OLLAMA_MODEL", None),
+                    embedding_provider=os.getenv("EMBEDDING_PROVIDER", None),
+                    k=int(os.getenv("AUDIT_K", "10")),
+                )
+            except Exception as exc:
+                st.warning(
+                    "LLM or advanced analysis unavailable; running retrieval-only defense audit. "
+                    f"Reason: {exc}"
+                )
+                payload = run_defense_anticipation(
+                    officer_statement=statement.strip(),
+                    vector_db_path=os.getenv("VECTOR_DB_PATH", "/vector_db"),
+                    embedding_provider=os.getenv("EMBEDDING_PROVIDER", None),
+                    k=int(os.getenv("AUDIT_K", "10")),
+                    retrieval_only=True,
+                )
+
+            st.markdown("### Defense / Rebuttal Analysis")
+            st.code(payload["analysis"], language="markdown")
+            st.markdown("### Source Documents")
+            for idx, src in enumerate(payload["sources"], start=1):
+                st.markdown(f"**Source {idx}**")
+                st.json(src["metadata"])
+                st.write(src["snippet"])
+
+
 def main() -> None:
     st.set_page_config(page_title="TTPS Assistant", page_icon="⚖️", layout="wide")
     st.title("TTPS Assistant")
-    st.caption("Legal Advisor + Complaint Drafter + ICCS Lookup")
+    st.caption("Legal Advisor + Complaint Drafter + ICCS Lookup + Prosecution Audit")
 
-    tab1, tab2, tab3 = st.tabs(["Legal Advisor", "File Drafter", "ICCS Lookup"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(
+        [
+            "Legal Advisor",
+            "File Drafter",
+            "ICCS Lookup",
+            "Prosecution Audit",
+            "Defense Anticipation",
+        ]
+    )
     with tab1:
         render_legal_advisor_tab()
     with tab2:
         render_file_drafter_tab()
     with tab3:
         render_iccs_lookup_tab()
+    with tab4:
+        render_prosecution_audit_tab()
+    with tab5:
+        render_defense_strategy_tab()
 
     st.markdown("---")
     st.caption(
