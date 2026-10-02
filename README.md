@@ -1,6 +1,6 @@
 # Trinidad & Tobago Laws Scraping + Legal Chunking
 
-This repository provides nine Python utilities:
+This repository provides ten Python utilities:
 
 1. `laws_scraper.py`
    - Scrapes the Digital Legislative Library revised Acts pages.
@@ -55,6 +55,12 @@ This repository provides nine Python utilities:
      - prosecution/defense audit checks
      - cleanliness scan for banned case-specific terms
      - optional strict mode for authority-keyword expectations
+
+10. `run_prosecution_pipeline.py`
+   - One-command runner that executes:
+     - prosecution corpus bootstrap
+     - vector DB rebuild
+     - prosecution stack validation
 
 ## Install
 
@@ -186,6 +192,18 @@ audit scaffolding and source-grounded risk checks.
 
 ```bash
 python3 validate_prosecution_stack.py \
+  --vector-db-path /workspace/vector_db \
+  --strict-authority
+```
+
+## One-Command Pipeline (YOLO mode)
+
+```bash
+python3 run_prosecution_pipeline.py \
+  --output-root /workspace/data/prosecution_bootstrap \
+  --scrape-limit 120 \
+  --min-priority-docs 20 \
+  --max-priority-docs 60 \
   --vector-db-path /workspace/vector_db \
   --strict-authority
 ```

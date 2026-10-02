@@ -5,7 +5,9 @@ PyMuPDF
 crawl4ai
 streamlit
 langchain
+langchain-core
 langchain-community
+langchain-ollama
 langchain-openai
 chromadb
 sentence-transformers

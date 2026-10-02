@@ -14,13 +14,11 @@ import os
 from pathlib import Path
 from typing import Optional
 
+import requests
 from langchain_classic.chains import RetrievalQA
 from langchain_core.prompts import PromptTemplate
-from langchain_community.chat_models import ChatOllama
-from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
-import requests
 
 
 DEFAULT_QA_PROMPT = """You are the TTPS Legal Assistant.
@@ -62,7 +60,24 @@ def build_embeddings(embedding_provider: Optional[str] = None):
     provider = (embedding_provider or os.getenv("EMBEDDING_PROVIDER", "")).strip().lower()
     if provider == "openai" or os.getenv("OPENAI_API_KEY"):
         return OpenAIEmbeddings(model=os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-large"))
-    return HuggingFaceEmbeddings(model_name=os.getenv("HF_EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2"))
+    try:
+        from langchain_huggingface import HuggingFaceEmbeddings  # type: ignore
+    except Exception:  # pragma: no cover - compatibility fallback
+        from langchain_community.embeddings import HuggingFaceEmbeddings  # type: ignore
+    return HuggingFaceEmbeddings(
+        model_name=os.getenv("HF_EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
+    )
+
+
+def _build_chat_ollama(model_name: Optional[str] = None):
+    try:
+        from langchain_ollama import ChatOllama  # type: ignore
+    except Exception:  # pragma: no cover - compatibility fallback
+        from langchain_community.chat_models import ChatOllama  # type: ignore
+    return ChatOllama(
+        model=model_name or os.getenv("OLLAMA_MODEL", "llama3.1"),
+        temperature=float(os.getenv("LLM_TEMPERATURE", "0.1")),
+    )
 
 
 def build_llm(llm_provider: Optional[str] = None, model_name: Optional[str] = None):
@@ -82,10 +97,7 @@ def build_llm(llm_provider: Optional[str] = None, model_name: Optional[str] = No
     if provider == "ollama":
         if not is_ollama_available():
             raise RuntimeError("Ollama provider selected but Ollama service is unavailable.")
-        return ChatOllama(
-            model=model_name or os.getenv("OLLAMA_MODEL", "llama3.1"),
-            temperature=float(os.getenv("LLM_TEMPERATURE", "0.1")),
-        )
+        return _build_chat_ollama(model_name=model_name)
 
     # Auto mode: OpenAI first, then local Ollama.
     if os.getenv("OPENAI_API_KEY"):
@@ -94,10 +106,7 @@ def build_llm(llm_provider: Optional[str] = None, model_name: Optional[str] = No
             temperature=float(os.getenv("LLM_TEMPERATURE", "0.1")),
         )
     if is_ollama_available():
-        return ChatOllama(
-            model=model_name or os.getenv("OLLAMA_MODEL", "llama3.1"),
-            temperature=float(os.getenv("LLM_TEMPERATURE", "0.1")),
-        )
+        return _build_chat_ollama(model_name=model_name)
     raise RuntimeError(
         "No LLM runtime available. Set OPENAI_API_KEY for GPT-4o or start a local Ollama server."
     )
@@ -141,10 +150,7 @@ def retrieval_only_search(
 
 
 def build_ollama_chat_model(model_name: Optional[str] = None):
-    return ChatOllama(
-        model=model_name or os.getenv("OLLAMA_MODEL", "llama3.1"),
-        temperature=float(os.getenv("LLM_TEMPERATURE", "0.1")),
-    )
+    return _build_chat_ollama(model_name=model_name)
 
 
 def load_vector_store(vector_db_path: str = "/vector_db", embedding_provider: Optional[str] = None) -> Chroma:

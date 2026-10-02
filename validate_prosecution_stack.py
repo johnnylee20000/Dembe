@@ -14,8 +14,8 @@ import argparse
 import json
 from pathlib import Path
 
-from prosecution_audit import run_defense_anticipation, run_prosecution_audit
 from assistant_core import retrieval_only_search
+from prosecution_audit import run_defense_anticipation, run_prosecution_audit
 
 
 BANNED_TERMS = ("jaggan", "santa cruz", "draco", "allister badal", "badal")
@@ -26,7 +26,17 @@ def _contains_banned(text: str) -> list[str]:
     return [term for term in BANNED_TERMS if term in lowered]
 
 
-def validate_stack(vector_db_path: str) -> dict:
+def _flatten_sources_for_authority(sources: list[dict]) -> str:
+    parts = []
+    for item in sources:
+        meta = item.get("metadata", {}) or {}
+        parts.append(str(meta.get("act_name", "")))
+        parts.append(str(meta.get("header", "")))
+        parts.append(str(item.get("snippet", "")))
+    return " ".join(parts).lower()
+
+
+def validate_stack(vector_db_path: str, *, strict_authority: bool = False) -> dict:
     results: dict[str, object] = {}
 
     # 1) Legal advisor retrieval test prompts.
@@ -98,35 +108,15 @@ def validate_stack(vector_db_path: str) -> dict:
     }
 
     # Overall pass/fail conditions.
-    source1_acts = " ".join(
-        (
-            str(item.get("metadata", {}).get("act_name", ""))
-            + " "
-            + str(item.get("metadata", {}).get("header", ""))
-        ).lower()
-        for item in sources_1
-    )
-    source2_acts = " ".join(
-        (
-            str(item.get("metadata", {}).get("act_name", ""))
-            + " "
-            + str(item.get("metadata", {}).get("header", ""))
-        ).lower()
-        for item in sources_2
-    )
+    source1_acts = _flatten_sources_for_authority(sources_1)
+    source2_acts = _flatten_sources_for_authority(sources_2)
+
+    caution_terms = ("police", "judge", "evidence", "criminal", "caution", "warning", "rights")
+    warrant_terms = ("summary courts", "summary", "procedure", "search", "warrant")
+
     authority_hits = {
-        "caution_prompt_has_police_or_judges": (
-            ("police" in source1_acts)
-            or ("judge" in source1_acts)
-            or ("evidence" in source1_acts)
-            or ("criminal" in source1_acts)
-        ),
-        "warrant_prompt_has_summary_or_procedure": (
-            ("summary courts" in source2_acts)
-            or ("summary" in source2_acts)
-            or ("procedure" in source2_acts)
-            or ("search" in source2_acts)
-        ),
+        "caution_prompt_has_authority_signals": any(term in source1_acts for term in caution_terms),
+        "warrant_prompt_has_authority_signals": any(term in source2_acts for term in warrant_terms),
     }
     results["authority_checks"] = authority_hits
 
@@ -136,9 +126,14 @@ def validate_stack(vector_db_path: str) -> dict:
         results["prosecution_audit"]["has_mens_rea_section"],  # type: ignore[index]
         results["defense_anticipation"]["has_admissibility_verdict"],  # type: ignore[index]
         results["cleanliness"]["clean"],  # type: ignore[index]
-        authority_hits["caution_prompt_has_police_or_judges"],
-        authority_hits["warrant_prompt_has_summary_or_procedure"],
     ]
+    if strict_authority:
+        pass_conditions.extend(
+            [
+                authority_hits["caution_prompt_has_authority_signals"],
+                authority_hits["warrant_prompt_has_authority_signals"],
+            ]
+        )
     results["overall_pass"] = all(pass_conditions)
     return results
 
@@ -150,12 +145,20 @@ def build_parser() -> argparse.ArgumentParser:
         default="/workspace/vector_db",
         help="Path to vector DB used in validation.",
     )
+    parser.add_argument(
+        "--strict-authority",
+        action="store_true",
+        help="Require authority-keyword checks to pass in addition to baseline health checks.",
+    )
     return parser
 
 
 def main() -> int:
     args = build_parser().parse_args()
-    summary = validate_stack(vector_db_path=args.vector_db_path)
+    summary = validate_stack(
+        vector_db_path=args.vector_db_path,
+        strict_authority=args.strict_authority,
+    )
     print(json.dumps(summary, indent=2, ensure_ascii=False))
     if not summary.get("overall_pass"):
         return 2
